@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <style>
+        header {
+            background-color: #082535;
+            color: #ffffff;
+            padding: 0.2em;
+        }
+        
+        header h1 {
+            text-align: center;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('Resources/icons/registerbg2.jpg');
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #reservations {
+            padding: 50px 0;
+        }
+        
+        .reservation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .reservation-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #082535;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <div class="logo">
+                            <img src="Resources/the galery cafe logo.png" alt="The Gallery Cafe" width="150px">
+                        </div>
+                    </td>
+                    <td>
+                        <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </header>
+
+    <div class="container">
+        <section id="reservations">
+            <div class="reservation-container">
+                <h2>Reservations</h2>
+                <form id="reservationForm" action="reservation.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your Name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your Phone Number" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your Email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Reservation Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Area</label>
+                        <select name="area" id="area">
+                        <option value="privateDining">Private Dining</option>
+                        <option value="outdoorArea">Outdoor Area</option>
+                        <option value="indoorArea">Indoor Area</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfSeats">Number of Seats</label>
+                        <input type="number" id="numberOfSeats" name="numberOfSeats" value="1" min="1">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Confirm Reservation</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h2>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Feactures.html" target="_blank">Features and Facilities</a></li>
+
+
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+</body>
+
+</html>

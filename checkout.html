@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+        }
+        
+        header h1 {
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+        
+        .form-section {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin: 5px 0 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .cart {
+            border-left: 1px solid #ced4da;
+            padding-left: 20px;
+            float: left;
+            width: auto;
+            float: right;
+            width: auto;
+        }
+        
+        .cart h3 {
+            margin-top: 0;
+        }
+        
+        .cart ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .cart li {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+        
+        .cart .total {
+            font-weight: bold;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <div class="logo">
+                        <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe" width="150px">
+                    </div>
+                </td>
+                <td>
+                    <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <div class="container">
+        <form id="checkoutForm" action="checkout.php" method="post">
+            <h2>Checkout form</h2>
+
+            <div class="form-section">
+                <h3>Billing address</h3>
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email (Optional)</label>
+                <input type="email" id="email" name="email">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+
+                <label>
+                    <input type="checkbox" name="shippingSameAsBilling"> Shipping address is the same as my billing address
+                </label>
+
+                <label>
+                    <input type="checkbox" name="saveInfo"> Save this information for next time
+                </label>
+            </div><br>
+
+            <div class="form-section">
+                <h2>Payment</h2>
+                <label>
+                    <input type="radio" name="paymentMethod" value="Credit Card" required> Credit card
+                </label>
+
+                <label>
+                    <input type="radio" name="paymentMethod" value="Debit Card" required> Debit card
+                </label><br>
+
+                <label for="total">Price</label>
+                <input type="text" id="total" name="total" required>
+
+                <label for="ccName">Name on card</label>
+                <input type="text" id="ccName" name="ccName" required>
+
+                <label for="ccNumber">Credit card number</label>
+                <input type="text" id="ccNumber" name="ccNumber" required>
+
+                <label for="ccExpiration">Expiration (Year/Month)</label>
+                <input type="" id="ccExpiration" name="ccExpiration" required>
+
+                <label for="ccCVV">CVV</label>
+                <input type="text" id="ccCVV" name="ccCVV" required>
+            </div>
+
+            <button type="submit">Conform to checkout</button>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸 </h2>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="Feactures.html" target="_blank">Features and Facilities</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+
+</body>
+
+</html>

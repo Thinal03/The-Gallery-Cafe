@@ -1,0 +1,2839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Menu Management</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .table-section {
+            margin-bottom: 30px;
+        }
+        
+        .table-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .item img {
+            max-width: 100px;
+        }
+        
+        .item input[type="text"],
+        .item input[type="number"],
+        .item input[type="file"] {
+            display: block;
+            margin: 10px auto;
+        }
+        
+        .addCart,
+        .editItem {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .editItem {
+            background-color: #2196F3;
+        }
+        
+        .addNewItem {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section" id="add-new-item">
+            <h2>Add New Item</h2>
+            <table>
+                <tr>
+                    <th>Upload Photo</th>
+                    <th>New Food Name</th>
+                    <th>New Price</th>
+                    <th>Add Action</th>
+                </tr>
+                <tr>
+                    <td><input type="file" id="newPhoto" placeholder="Upload Photo"></td>
+                    <td><input type="text" id="newFoodName" placeholder="New Food Name"></td>
+                    <td><input type="number" id="newPrice" placeholder="New Price"></td>
+                    <td><button class="addCart addNewItem" onclick="addItem()">Add New Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-1">
+            <h2>Bottled Water</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/waterbottel small.jpeg" alt="Water Bottle Small"></td>
+                    <td>Water Bottle Small 500ml</td>
+                    <td>RS.300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/waterbottel medium.jpeg" alt="Water Bottle Medium"></td>
+                    <td>Water Bottle Medium 1L</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-2">
+            <h2>Milkshake</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Vanila Milkshake.jpeg" alt="Vanilla Milkshake"></td>
+                    <td>Vanilla Milkshake</td>
+                    <td>RS.800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Banana Milkshake.jpeg" alt="Banana Milkshake"></td>
+                    <td>Banana Milkshake</td>
+                    <td>RS.800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/chocolate Milkshake.jpeg" alt="Chocolate Milkshake"></td>
+                    <td>Chocolate Milkshake</td>
+                    <td>RS.900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Avercado milkshake.jpeg" alt="Avocado Milkshake"></td>
+                    <td>Avocado Milkshake</td>
+                    <td>RS.840</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-3">
+            <h2>Mocktail</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/pina colada mocktail.jpeg" alt="Pina Colada"></td>
+                    <td>Pina Colada</td>
+                    <td>RS.700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/sweethart mocktail.jpeg" alt="Sweetheart"></td>
+                    <td>Sweetheart</td>
+                    <td>RS.750</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Aquanga Mangot mocktai.jpeg" alt="Aquanga Mango"></td>
+                    <td>Aquanga Mangot</td>
+                    <td>RS.740</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-4">
+            <h2>Mojito</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/lime mojito.jpeg" alt="Lime Mojito"></td>
+                    <td>Lime Mojito</td>
+                    <td>RS.680</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/passon mojito.jpeg" alt="Passon Mojito"></td>
+                    <td>Passon Mojito</td>
+                    <td>RS.650</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/strawberry mojito.jpeg" alt="Strawberry Mojito"></td>
+                    <td>Strawberry Mojito</td>
+                    <td>RS.710</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/green apple mojito.jpeg" alt="Green Apple Mojito"></td>
+                    <td>Green Apple Mojito</td>
+                    <td>RS.780</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/blue mint mojito.jpeg" alt="Blue Mint Mojito"></td>
+                    <td>Blue Mint Mojito</td>
+                    <td>RS.800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-5">
+            <h2>Fruit Juice</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Fruit Juice - Lime.jpg" alt="Fruit Juice - Lime"></td>
+                    <td>Fruit Juice - Lime</td>
+                    <td>RS.600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Fruit Juice papaya.jpeg" alt="Fruit Juice - papaya"></td>
+                    <td>Fruit Juice - papaya</td>
+                    <td>RS.520</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Fruit Juice melon.jpeg" alt="Fruit Juice - Melon"></td>
+                    <td>Fruit Juice - Melon</td>
+                    <td>RS.510</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/fruit juice pineapple.jpeg" alt="Fruit Juice - Pineapple"></td>
+                    <td>Fruit Juice - Pineapple</td>
+                    <td>RS.540</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/fruit juice orenage.jpeg" alt="Fruit Juice - Orange"></td>
+                    <td>Fruit Juice - Orange</td>
+                    <td>RS.540</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Fruit Juice - mango.jpg" alt="Fruit Juice - Mango"></td>
+                    <td>Fruit Juice - Mango</td>
+                    <td>RS.520</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Fruit Juice - avercado.jpg" alt="Fruit Juice - Avocado"></td>
+                    <td>Fruit Juice - Avocado</td>
+                    <td>RS.560</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/fruit juice mixed.jpeg" alt="Fruit Juice - Mixed"></td>
+                    <td>Fruit Juice - Mixed</td>
+                    <td>RS.440</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-6">
+            <h2>Lassi</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/sweet lassi.jpg" alt="Sweet Lassi"></td>
+                    <td>Sweet Lassi</td>
+                    <td>RS.740</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/banana lassi.jpeg" alt="Banana Lassi"></td>
+                    <td>Banana Lassi</td>
+                    <td>RS.760</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-7">
+            <h2>Smoothie</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/avercado smoothie.jpeg" alt="Avocado Smoothie"></td>
+                    <td>Avocado Smoothie</td>
+                    <td>RS.740</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Banana smoothie.jpeg" alt="Banana Smoothie"></td>
+                    <td>Banana Smoothie</td>
+                    <td>RS.720</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/mango smoothie.jpeg" alt="Mango Smoothie"></td>
+                    <td>Mango Smoothie</td>
+                    <td>RS.710</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/Avercado milkshake.jpeg" alt="Strawberry Smoothie"></td>
+                    <td>Strawberry Smoothie</td>
+                    <td>RS.700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-8">
+            <h2>Soft Drinks</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/pepsi.jpeg" alt="Pepsi"></td>
+                    <td>Pepsi</td>
+                    <td>RS.200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/mountan dew.jpeg" alt="Mountan Dew"></td>
+                    <td>Mountan Dew</td>
+                    <td>RS.200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/mirinda.jpeg" alt="Mirinda"></td>
+                    <td>Mirinda</td>
+                    <td>RS.200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Drinks/7up.jpeg" alt="7 Up"></td>
+                    <td>7 Up</td>
+                    <td>RS.200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-9">
+            <h2>Soup</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Soup of The Day.jpeg" alt="Soup of The day"></td>
+                    <td>Soup of The day</td>
+                    <td>RS.800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-10">
+            <h2>Snacks</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Snacks club sandwich.jpg" alt="Club Sandwich"></td>
+                    <td>Club Sandwich</td>
+                    <td>RS.600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/snacks tuna sandwich.jpeg" alt="Tuna Sandwich"></td>
+                    <td>Tuna Sandwich</td>
+                    <td>RS.1000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Snaks Crispy Fish Burger.jpg" alt="Crispy Fish Burger"></td>
+                    <td>Crispy Fish Burger</td>
+                    <td>RS.1400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Snaks Beef Burger.jpeg" alt="Beef Burger"></td>
+                    <td>Beef Burger</td>
+                    <td>RS.1700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Sanks chicken burger.jpg" alt="Crispy Chicken Burger"></td>
+                    <td>Crispy Chicken Burger</td>
+                    <td>RS.1600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Snacks tanddri chicken sandwich.jpeg" alt="Tandoori Chicken Sandwich"></td>
+                    <td>Tandoori Chicken Sandwich</td>
+                    <td>RS.800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-11">
+            <h2>Western Meal</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Western Drumstick Trio.jpeg" alt="Drumstick"></td>
+                    <td>Drumstick</td>
+                    <td>RS.410</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Western Grill Chicken Half.jpeg" alt="Grill Chicken"></td>
+                    <td>Grill Chicken</td>
+                    <td>RS.700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Western Fried Chicken Small.jpeg" alt="Fried Chicken"></td>
+                    <td>Fried Chicken</td>
+                    <td>RS.450</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Western french fries.jpeg" alt="French fries"></td>
+                    <td>French fries</td>
+                    <td>RS.600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Western fish and chips.jpg" alt="fish and chips"></td>
+                    <td>Fish and Chips</td>
+                    <td>RS.590</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Western batter fried prawns.jpg" alt="Batter fried prawns"></td>
+                    <td>Batter Fried Prawns</td>
+                    <td>RS.1200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-12">
+            <h1>Indian</h1>
+            <div class="section" id="section-121">
+                <h2>Oven Fresh Breads</h2>
+                <table>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Food Name</th>
+                        <th>Price</th>
+                        <th>Edit Photo</th>
+                        <th>Edit Food Name</th>
+                        <th>Edit Price</th>
+                        <th>Edit Action</th>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Parata.jpeg" alt="Parata"></td>
+                        <td>Parata</td>
+                        <td>RS.200</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Chapathi.jpg" alt="Chapathi"></td>
+                        <td>Chapathi</td>
+                        <td>RS.400</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Naan.jpg" alt="Naan"></td>
+                        <td>Naan</td>
+                        <td>RS.350</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Butter Naan.jpeg" alt="Butter Naan"></td>
+                        <td>Butter Naan</td>
+                        <td>RS.400</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Garlic Batter Naan.jpeg" alt="Garlic Batter Naan"></td>
+                        <td>Garlic Batter Naan</td>
+                        <td>RS.450</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Rumali.jpeg" alt="Rumali"></td>
+                        <td>Rumali</td>
+                        <td>RS.420</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Foods/Cheese Naan.jpeg" alt="Cheese Naan"></td>
+                        <td>Cheese Naan</td>
+                        <td>RS.500</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section" id="section-13">
+            <h2>Indian Special Dishes</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/special indian cicken dish 1.jpg" alt="Chicken 65"></td>
+                    <td>Chicken 65</td>
+                    <td>RS.4200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/special indian cihcken dish 2.jpg" alt="Paneer 65"></td>
+                    <td>Paneer 65</td>
+                    <td>RS.4300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/special indian mushroom dish.jpeg" alt="Mushroom 65"></td>
+                    <td>Mushroom 65</td>
+                    <td>RS.4200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-14">
+            <h2>Kebabs and Tandoori</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/murag kebab.jpeg" alt="Murag Kebab"></td>
+                    <td>Murag Kebab</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/kalimiri kebab.jpeg" alt="Kalimiri Kebab"></td>
+                    <td>Kalimiri Kebab</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Hariyana Chiken Kebab.jpeg" alt="Hariyana Chiken Kebab"></td>
+                    <td>Hariyana Chiken Kebab</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Chicken Shish Kebab.jpg" alt="Chicken Shish Kebab"></td>
+                    <td>Chicken Shish Kebab</td>
+                    <td>RS.3500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Beef Shish Kebab.jpeg" alt="Beef Shish Kebab"></td>
+                    <td>Beef Shish Kebab</td>
+                    <td>RS.3100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Tandoori chicken biriyani.jpg" alt="Tandoori Chicken"></td>
+                    <td>Tandoori Chicken</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-15">
+            <h2>Biriyani</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Chicken biriyani.jpg" alt="Chicken Biriyani"></td>
+                    <td>Chicken Biriyani</td>
+                    <td>RS.4400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Tandoori chicken biriyani.jpg" alt="Tandoori Chicken Biriyani"></td>
+                    <td>Tandoori Chicken Biriyani</td>
+                    <td>RS.4700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Prawn biriyani.jpg" alt="Prawn Biryani"></td>
+                    <td>Prawn Biryani</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Fish Biriyani.jpg" alt="Fish Biriyani"></td>
+                    <td>Fish Biriyani</td>
+                    <td>RS.4100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Beef Biriyani.jpeg" alt="Beef Biriyani"></td>
+                    <td>Beef Biriyani</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Vegetable biriyani.jpeg" alt="Vegetable Biriyani"></td>
+                    <td>Vegetable Biriyani</td>
+                    <td>RS.4400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-16">
+            <h2>Chicken</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Chicken Masala.jpeg" alt="Chicken Masala"></td>
+                    <td>Chicken Masala</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Chicken Kuruma.jpg" alt="Chicken Kuruma"></td>
+                    <td>Chicken Kuruma</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Kandoori Spicy Chicken.jpeg" alt="Kandoori Spicy Chicken"></td>
+                    <td>Kandoori Spicy Chicken</td>
+                    <td>RS.3700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Butter Chicken.jpg" alt="Butter Chicken"></td>
+                    <td>Butter Chicken</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Chicken Kadai.jpg" alt="Chicken Kadai"></td>
+                    <td>Chicken Kadai</td>
+                    <td>RS.3700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Chicken Tikka Masala.jpg" alt="Chicken Tikka Masala"></td>
+                    <td>Chicken Tikka Masala</td>
+                    <td>RS.3600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Chicken Makhani.jpeg" alt="Chicken Makhani"></td>
+                    <td>Chicken Makhani</td>
+                    <td>RS.3900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-17">
+            <h2>Seafood</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Seer Fish Masala.jpg" alt="Seer Fish Masala"></td>
+                    <td>Seer Fish Masala</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Prawns Masala.jpeg" alt="Prawns Masala"></td>
+                    <td>Prawns Masala</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-18">
+            <h2>Beef & Mutton</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Beef Masala.jpeg" alt="Beef Masala"></td>
+                    <td>Beef Masala</td>
+                    <td>RS.6400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Beef Kuruma.jpeg" alt="Beef Kuruma"></td>
+                    <td>Beef Kuruma</td>
+                    <td>RS.6300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Kandoori Spicy Beef.jpg" alt="Kandoori Spicy Beef"></td>
+                    <td>Kandoori Spicy Beef</td>
+                    <td>RS.5000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Beef Kadai.jpeg" alt="Beef Kadai"></td>
+                    <td>Beef Kadai</td>
+                    <td>RS.5300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Mutton Kurma.jpeg" alt="Mutton Kurma"></td>
+                    <td>Mutton Kurma</td>
+                    <td>RS.5100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Mutton Kurma.jpeg" alt="Mutton Kadai"></td>
+                    <td>Mutton Kadai</td>
+                    <td>RS.5400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Mutton Masala.jpeg" alt="Mutton Masala"></td>
+                    <td>Mutton Masala</td>
+                    <td>RS.5600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Indian Mutton Hidrabadi.jpeg" alt="Mutton Hidrabadi"></td>
+                    <td>Mutton Hidrabadi</td>
+                    <td>RS.6000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-19">
+            <h2>Vegetables</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Vegetable Chop Suey.jpeg" alt="Vegetable Chop Suey"></td>
+                    <td>Vegetable Chop Suey</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Cashew Paneer.jpeg" alt="Cashew Paneer"></td>
+                    <td>Cashew Paneer</td>
+                    <td>RS.2200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Channa Masala.jpg" alt="Channa Masala"></td>
+                    <td>Channa Masala</td>
+                    <td>RS.2100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Dhal Fry (Thoor).jpg" alt="Dhal Fry (Thoor)"></td>
+                    <td>Dhal Fry (Thoor)</td>
+                    <td>RS.2500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Dhal Fry (Thoor).jpg" alt="Bhindi Masala"></td>
+                    <td>Bhindi Masala</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Mashroom & Bell Pepper Masala.jpeg" alt="Mashroom & Bell Pepper Masala"></td>
+                    <td>Mashroom & Bell Pepper Masala</td>
+                    <td>RS.2500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Mixed Vegetable Curry.jpg" alt="Mixed Vegetable Curry"></td>
+                    <td>Mixed Vegetable Curry</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Alu Gobi Masala.jpg" alt="Alu Gobi Masala"></td>
+                    <td>Alu Gobi Masala</td>
+                    <td>RS.2100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Alu Matar.jpeg" alt="Alu Matar"></td>
+                    <td>Alu Matar</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Butter Paneer.jpeg" alt="Butter Paneer"></td>
+                    <td>Butter Paneer</td>
+                    <td>RS.2000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Palak Paneer.jpeg" alt="Palak Paneer"></td>
+                    <td>Palak Paneer</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-20">
+            <h2>Indian - Sawans</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Chicken Biriyani Sawan.jpeg" alt="Chicken Biriyani Sawan"></td>
+                    <td>Chicken Biriyani Sawan</td>
+                    <td>RS.7400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Mutton Biriyani Sawan.jpeg" alt="Mutton Biriyani Sawan"></td>
+                    <td>Mutton Biriyani Sawan</td>
+                    <td>RS.7300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Prawns Biryani Sawan.jpeg" alt="Prawns Biryani Sawan"></td>
+                    <td>Prawns Biryani Sawan</td>
+                    <td>RS.7000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Fish Biriyani Sawan.jpeg" alt="Fish Biriyani Sawan"></td>
+                    <td>Fish Biriyani Sawan</td>
+                    <td>RS.7500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Foods/Beef Biriyani Sawan.jpeg" alt="Beef Biriyani Sawan"></td>
+                    <td>Beef Biriyani Sawan</td>
+                    <td>RS.7400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-212">
+            <h1>Sri Lankan</h1>
+            <div class="section" id="section-21">
+                <h2>Soup</h2>
+                <table>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Food Name</th>
+                        <th>Price</th>
+                        <th>Edit Photo</th>
+                        <th>Edit Food Name</th>
+                        <th>Edit Price</th>
+                        <th>Edit Action</th>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Italian Food/soup Buridda.jpg" alt="Buridda Soup Bowl"></td>
+                        <td>Buridda Soup Bowl</td>
+                        <td>RS.400</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Italian Food/soup Bagnun.png" alt="Bagnun Soup Bowl"></td>
+                        <td>Bagnun Soup Bowl</td>
+                        <td>RS.400</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Italian Food/soup Agliata.jpg" alt="Agliata Soup Bowl"></td>
+                        <td>Agliata Soup Bowl</td>
+                        <td>RS.400</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="section" id="section-22">
+            <h2>RICES / BREAD</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Roast pan.jpg" alt="Roast paan"></td>
+                    <td>Roast paan</td>
+                    <td>RS.140</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Keeri samba.jpg" alt="Keeri samba"></td>
+                    <td>Keeri samba</td>
+                    <td>RS.1900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Rathu kakulu.jpg" alt="Rathu kakulu"></td>
+                    <td>Rathu kakulu</td>
+                    <td>RS.1400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Basmathi.jpg" alt="Basmathi"></td>
+                    <td>Basmathi</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Yellow Rice.jpg" alt="Yellow Rice"></td>
+                    <td>Yellow Rice</td>
+                    <td>RS.1900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/rice Fried Rice.jpg" alt="Fried Rice"></td>
+                    <td>Fried Rice</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/rice Bamboo Biriyani.jpg" alt="Bamboo Biriyani"></td>
+                    <td>Bamboo Biriyani</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Chicken Biriyani.jpg" alt="Chicken Biriyani"></td>
+                    <td>Chicken Biriyani</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/rice Lamprais.jpg" alt="Lamprais"></td>
+                    <td>Lamprais</td>
+                    <td>RS.4100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/rice Kachal Rice.jpg" alt="Kachal Rice"></td>
+                    <td>Kachal Rice</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-23">
+            <h2>Fish Currys</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Maalu Mirisata.jpg" alt="Maalu Mirisata"></td>
+                    <td>Maalu Mirisata</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Maalu Ambulthiyal.jpg" alt="Maalu Ambulthiyal"></td>
+                    <td>Maalu Ambulthiyal</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Maalu Ambulthiyal.jpg" alt="Maalu Themparadu Karala"></td>
+                    <td>Maalu Themparadu Karala</td>
+                    <td>RS.3100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Maalu Suduwata.jpg" alt="Maalu Suduwata"></td>
+                    <td>Maalu Suduwata</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Maalu Devilled.jpg" alt="Maalu Devilled"></td>
+                    <td>Maalu Devilled</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Maalu Stew.jpg" alt="Maalu Stew"></td>
+                    <td>Maalu Stew</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Fried Seer Fish.jpg" alt="Fried Seer Fish"></td>
+                    <td>Fried Seer Fish</td>
+                    <td>RS.2800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Fish Mackerel Curry.jpg" alt="Mackerel Curry"></td>
+                    <td>Mackerel Curry</td>
+                    <td>RS.2800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-24">
+            <h2>CUTTLEFISH</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Cuttlefish Dalla Rathata, Sarata.jpg" alt="Dalla Rathata, Sarata"></td>
+                    <td>Dalla Rathata, Sarata</td>
+                    <td>RS.4400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/cuttlefish Hot Butter Cuttlefish.jpg" alt="Hot Butter Cuttlefish"></td>
+                    <td>Hot Butter Cuttlefish</td>
+                    <td>RS.4100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Cuttlefish Dallo Devilled.jpg" alt="Dallo Devilled"></td>
+                    <td>Dallo Devilled</td>
+                    <td>RS.4900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-25">
+            <h2>PRAWNS</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Isso Yapanaya kramayata.jpg" alt="Isso Yapanaya kramayata"></td>
+                    <td>Isso Yapanaya kramayata</td>
+                    <td>RS.2300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Isso Stew.jpg" alt="Isso Stew"></td>
+                    <td>Isso Stew</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Isso Themperadu.jpg" alt="Isso Themperadu"></td>
+                    <td>Isso Themperadu</td>
+                    <td>RS.2800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Isso Devilled.jpg" alt="Isso Devilled"></td>
+                    <td>Isso Devilled</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Hot Butter Isso.jpg" alt="Hot Butter Isso"></td>
+                    <td>Hot Butter Isso</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-26">
+            <h2>CRAB</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Kakuluwo Negombo Kramayata.jpg" alt="Kakuluwo Negombo Kramayata"></td>
+                    <td>Kakuluwo Negombo Kramayata</td>
+                    <td>RS.5400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Lankan Chilli Kakuluwo.jpg" alt="Lankan Chilli Kakuluwo"></td>
+                    <td>Lankan Chilli Kakuluwo</td>
+                    <td>RS.4600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Crab Tempered Dry Curry.jpg" alt="Crab Tempered Dry Curry"></td>
+                    <td>Crab Tempered Dry Curry</td>
+                    <td>RS.4200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-27">
+            <h2>CHICKEN</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Kukulmas Yapanaya Kramayata.jpg" alt="Kukulmas Yapanaya Kramayata"></td>
+                    <td>Kukulmas Yapanaya Kramayata</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Kukulmas Kaluwata Uyala.jpg" alt="Kukulmas Kaluwata Uyala"></td>
+                    <td>Kukulmas Kaluwata Uyala</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Kukulmas Themparadu.jpg" alt="Kukulmas Themparadu"></td>
+                    <td>Kukulmas Themparadu</td>
+                    <td>RS.2900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Meat Balls Kirata ,Devilled.jpg" alt="Meat Balls Kirata / Devilled"></td>
+                    <td>Meat Balls Kirata / Devilled</td>
+                    <td>RS.3000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Hot Butter Chicken.jpg" alt="Hot Butter Chicken"></td>
+                    <td>Hot Butter Chicken</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-28">
+            <h2>MUTTON</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Elu Mas Rathata.jpg" alt="Elu Mas Rathata"></td>
+                    <td>Elu Mas Rathata</td>
+                    <td>RS.4400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Elu Mas Yapanaya Kramayata.jpg" alt="Elu Mas Yapanaya Kramayata"></td>
+                    <td>Elu Mas Yapanaya Kramayata</td>
+                    <td>RS.4900</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Elu Mas Stew.jpg" alt="Elu Mas Stew"></td>
+                    <td>Elu Mas Stew</td>
+                    <td>RS.4500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Elu Mas Devilled (Boneless).jpg" alt="Elu Mas Devilled"></td>
+                    <td>Elu Mas Devilled</td>
+                    <td>RS.4800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Elu Mas Themparadu.jpg" alt="Elu Mas Themparadu"></td>
+                    <td>Elu Mas Themparadu</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-29">
+            <h2>VEGETABLES</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Soya Curry , Devilled.jpg" alt="Soya Curry / Devilled"></td>
+                    <td>Soya Curry / Devilled</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Stuffed Capsicum.jpg" alt="veg Stuffed Capsicum"></td>
+                    <td>veg Stuffed Capsicum</td>
+                    <td>RS.2600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Beetroot Curry.jpg" alt="Beetroot Curry"></td>
+                    <td>Beetroot Curry</td>
+                    <td>RS.1400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Pumpkin Curry.jpg" alt="Pumpkin Curry"></td>
+                    <td>Pumpkin Curry</td>
+                    <td>RS.2300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Tempered Potato Curry.jpg" alt="Tempered Potato / Curry"></td>
+                    <td>Tempered Potato / Curry</td>
+                    <td>RS.2800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Mango Curry.jpg" alt="Mango Curry"></td>
+                    <td>Mango Curry</td>
+                    <td>RS.2200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Beans Curry.jpg" alt="Beans Curry"></td>
+                    <td>Beans Curry</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Dhal Curry.jpg" alt="Dhal Curry"></td>
+                    <td>Dhal Curry</td>
+                    <td>RS.2500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Tempered Pineapple.jpg" alt="Tempered Pineapple"></td>
+                    <td>Tempered Pineapple</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Polos Curry.jpg" alt="Polos Curry"></td>
+                    <td>Polos Curry</td>
+                    <td>RS.2100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Kaju Maluwa.jpg" alt="Kaju Maluwa"></td>
+                    <td>Kaju Maluwa</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/veg Batu Mojuwa.jpg" alt="Batu Mojuwa"></td>
+                    <td>Batu Mojuwa</td>
+                    <td>RS.2100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-30">
+            <h2>KOTTU</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Kottu.jpg" alt="Chicken Kottu"></td>
+                    <td>Chicken Kottu</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/mutton kottu.jpg" alt="Mutton Kottu"></td>
+                    <td>Mutton Kottu</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Cheesy Nai Miri.jpg" alt="Cheesy Nai Miris"></td>
+                    <td>Cheesy Nai Miris</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Kottu.jpg" alt="Masala Kottu"></td>
+                    <td>Masala Kottu</td>
+                    <td>RS.2200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-31">
+            <h2>Special Sri Lanka Meals</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/PITTU.jpg" alt="PITTU"></td>
+                    <td>PITTU</td>
+                    <td>RS.1000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/STRING HOPPERS.jpg" alt="STRING HOPPERS"></td>
+                    <td>STRING HOPPERS</td>
+                    <td>RS.1600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/HOPPERS.jpg" alt="HOPPERS"></td>
+                    <td>HOPPERS</td>
+                    <td>RS.300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/pol rotti.jpg" alt="POL ROTTI"></td>
+                    <td>POL ROTTI</td>
+                    <td>RS.250</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/EGG ROTTI.jpg" alt="EGG ROTTI"></td>
+                    <td>EGG ROTTI</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/The Galery  Tasting Basket 2.jpg" alt="The Galery Tasting Basket"></td>
+                    <td>The Galery Tasting Basket</td>
+                    <td>RS.4000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/Rice and Curry Special 3.jpg" alt="Rice and Curry Special"></td>
+                    <td>Rice and Curry Special</td>
+                    <td>RS.4500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Sri lankan Food/The Galery Special Chicken Kottu 1.jpg" alt="The Galery Special Chicken Kottu"></td>
+                    <td>The Galery Special Chicken Kottu</td>
+                    <td>RS.4600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-322">
+            <h1>Italian</h1>
+            <div class="section" id="section-32">
+                <h2>Rice</h2>
+                <table>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Food Name</th>
+                        <th>Price</th>
+                        <th>Edit Photo</th>
+                        <th>Edit Food Name</th>
+                        <th>Edit Price</th>
+                        <th>Edit Action</th>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Italian Food/Rice Arancine.jpg" alt="Arancine"></td>
+                        <td>Arancine</td>
+                        <td>RS.3400</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Italian Food/Rice Insalata_di_riso.jpg" alt="Insalata"></td>
+                        <td>Insalata</td>
+                        <td>RS.3900</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Resources/menu/Italian Food/Rice Supplì.jpg" alt="Supplì"></td>
+                        <td>Supplì</td>
+                        <td>RS.4500</td>
+                        <td><input type="file" name="editPhoto"></td>
+                        <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                        <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                        <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="section" id="section-33">
+            <h2>Bread</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Bread Crescentine.jpg" alt="Crescentine"></td>
+                    <td>Crescentine</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Bread Coppia-ferrarese.jpg" alt="Coppia-ferrarese"></td>
+                    <td>Coppia-ferrarese</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Bread Bruschetta.jpg" alt="Bruschetta"></td>
+                    <td>Bruschetta</td>
+                    <td>RS.2200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Bread Borlengo.jpg" alt="Borlengo"></td>
+                    <td>Borlengo</td>
+                    <td>RS.1400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-34">
+            <h2>Pasta</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/pasta -Culurgiones.jpg" alt="Culurgiones"></td>
+                    <td>Culurgiones</td>
+                    <td>RS.6400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Pasta Casunziei.jpg" alt="Casunziei"></td>
+                    <td>Casunziei</td>
+                    <td>RS.6300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Passta Busiate.jpg" alt="Busiate"></td>
+                    <td>Busiate</td>
+                    <td>RS.6600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Pasta Agnolini_mantovani.jpg" alt="Agnolini mantovani"></td>
+                    <td>Agnolini mantovani</td>
+                    <td>RS.5400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-35">
+            <h2>Pizza</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Prizza calzone.jpg" alt="calzone"></td>
+                    <td>Calzone</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Prizza Seafood_pizza.jpg" alt="Seafood Pizza"></td>
+                    <td>Seafood Pizza</td>
+                    <td>RS.4400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Pizza quattro formaggi.jpg" alt="Quattro formaggi"></td>
+                    <td>Quattro formaggi</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/pizza Roman pizza.jpg" alt="Roman Pizza"></td>
+                    <td>Roman Pizza</td>
+                    <td>RS.3700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-36">
+            <h2>Fish</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/fish Carpaccio.jpg" alt="Carpaccio"></td>
+                    <td>Carpaccio</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/fish Panettone.jpg" alt="Panettone"></td>
+                    <td>Panettone</td>
+                    <td>RS.4400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/fish-Cacciucco.jpg" alt="Cacciucco"></td>
+                    <td>Cacciucco</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/fish Acqua_pazza.jpg" alt="Acqua pazza"></td>
+                    <td>Acqua pazza</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-37">
+            <h2>Meat</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/Meat Arrosticini-.jpg" alt="Arrosticini"></td>
+                    <td>Arrosticini</td>
+                    <td>RS.5400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/meat Bistecca alla fiorentina.jpg" alt="Bistecca alla fiorentina"></td>
+                    <td>Bistecca alla fiorentina</td>
+                    <td>RS.5300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/meat bruscitti.jpg" alt="bruscitti"></td>
+                    <td>bruscitti</td>
+                    <td>RS.5800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/meat Abbacchio.jpg" alt="Abbacchio"></td>
+                    <td>Abbacchio</td>
+                    <td>RS.6300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-38">
+            <h2>Vegetable</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/veg Acquasale.jpg" alt="Acquasale"></td>
+                    <td>Acquasale</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/veg Caponata_.jpg" alt="Caponata"></td>
+                    <td>Caponata</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/veg Ciambotta.jpg" alt="Ciambotta"></td>
+                    <td>Ciambotta</td>
+                    <td>RS.2300</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/veg GiardinieraSpicy.JPG" alt="Giardiniera Spicy"></td>
+                    <td>Giardiniera Spicy</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/veg Parmigiana_di_melanzane.jpg" alt="Parmigiana di melanzane"></td>
+                    <td>Parmigiana di melanzane</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/veg rollatini.jpg" alt="rollatini"></td>
+                    <td>rollatini</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-39">
+            <h2>Wine</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/wine Aglianico_del_vulture_.jpg" alt="Aglianico del vulture_"></td>
+                    <td>Aglianico del vulture</td>
+                    <td>RS.10 000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/wine Falanghina_di_Bonea.JPG" alt="Falanghina di Bonea"></td>
+                    <td>Falanghina di Bonea</td>
+                    <td>RS.8000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/wine Franciacorta_milledi.jpg" alt="Franciacorta milledi"></td>
+                    <td>Franciacorta milledi</td>
+                    <td>RS.9000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/wine Lacrima_Christi,_.jpg" alt="Lacrima Christi"></td>
+                    <td>Lacrima Christi</td>
+                    <td>RS.10 400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Italian Food/wine lambrusco.jpg" alt="lambrusco"></td>
+                    <td>lambrusco</td>
+                    <td>RS.9400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-40">
+            <h1>Italian</h1>
+
+            <h2>Pastry</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Pastry Char_siu_bao.jpg" alt="Char_siu_bao"></td>
+                    <td>Char_siu_bao</td>
+                    <td>RS.1400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Pastry Mooncake.jpg" alt="Mooncake"></td>
+                    <td>Mooncake</td>
+                    <td>RS.1000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Pastry Shaobing5.jpg" alt="Shaobing5"></td>
+                    <td>Shaobing5</td>
+                    <td>RS.1200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Pastry Spring_onion_pancake.JPG" alt="Spring_onion_pancake"></td>
+                    <td>Spring onion pancake</td>
+                    <td>RS.1400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-42">
+            <h2>Dumplings</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Dumplings Mantou.jpg" alt="Mantou"></td>
+                    <td>Mantou</td>
+                    <td>RS.3400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Dumplings Xiao_Long_Bao.jpg" alt="Xiao_Long_Bao"></td>
+                    <td>Xiao Long Bao</td>
+                    <td>RS.3200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Dumplings-Baozi_Chengdu.jpg" alt="Baozi_Chengdu"></td>
+                    <td>Baozi Chengdu</td>
+                    <td>RS.3500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section" id="section-43">
+            <h2>Soup</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Soup hot pot.JPG" alt="Hot pot"></td>
+                    <td>Hot pot</td>
+                    <td>RS.2100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Soup Hot-and-Sour-Soup-Bowl.jpg" alt="Hot-and-Sour-Soup-Bowl"></td>
+                    <td>Hot and Sour Soup Bowl</td>
+                    <td>RS.2400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Sweet-and-sour_pork.jpg" alt="Sweet-and-sour_pork"></td>
+                    <td>Sweet and sour pork</td>
+                    <td>RS.2500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-44">
+            <h2>Rice</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/fired rice.JPG" alt="fired rice"></td>
+                    <td>fired rice</td>
+                    <td>RS.3500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/white rice.jpg" alt="white rice"></td>
+                    <td>white rice</td>
+                    <td>RS.3000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-45">
+            <h2>Meat</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/chiccken mango chilli chicken.jpg" alt="Mango chilli chicken"></td>
+                    <td>Mango chilli chicken</td>
+                    <td>RS.5100</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Charsiu.jpg" alt="Charsiu"></td>
+                    <td>Charsiu</td>
+                    <td>RS.4800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/chicken Kung-pao-shanghai.jpg" alt="Kung-pao-shanghai"></td>
+                    <td>Kung-pao-shanghai</td>
+                    <td>RS.4700</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/chicken sesame-chicken-1.webp" alt="Sesame chicken"></td>
+                    <td>Sesame chicken</td>
+                    <td>RS.4200</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Twice cooked pork.jpg" alt="Twice cooked pork"></td>
+                    <td>Twice cooked pork</td>
+                    <td>RS.4500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Chinese food/Braised_pork_in_brown_sauce.jpg" alt="Braised pork in brown sauce"></td>
+                    <td>Braised pork in brown sauce</td>
+                    <td>RS.4000</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="section-46">
+            <h2>Desert</h2>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food Name</th>
+                    <th>Price</th>
+                    <th>Edit Photo</th>
+                    <th>Edit Food Name</th>
+                    <th>Edit Price</th>
+                    <th>Edit Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Biscuit Pudding.jpeg" alt="Biscuit Pudding"></td>
+                    <td>Biscuit Pudding</td>
+                    <td>RS.450</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Fruit Salad with Ice Cream.jpeg" alt="Fruit Salad with Ice Cream"></td>
+                    <td>Fruit Salad with Ice Cream</td>
+                    <td>RS.800</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Fruit Salad.jpeg" alt="Fruit Salad"></td>
+                    <td>Fruit Salad</td>
+                    <td>RS.640</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Ice Cream.jpeg" alt="Ice Cream"></td>
+                    <td>Ice Cream</td>
+                    <td>RS.600</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Gulab Jamun.jpeg" alt="Gulab Jamun"></td>
+                    <td>Gulab Jamun</td>
+                    <td>RS.410</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Kulfi.jpeg" alt="Kulfi"></td>
+                    <td>Kulfi</td>
+                    <td>RS.500</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Resources/menu/Desert/Watalappam.jpg" alt="Watalappam"></td>
+                    <td>Watalappam</td>
+                    <td>RS.400</td>
+                    <td><input type="file" name="editPhoto"></td>
+                    <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                    <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                    <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function addItem() {
+            var newPhoto = document.getElementById("newPhoto").files[0];
+            var newFoodName = document.getElementById("newFoodName").value;
+            var newPrice = document.getElementById("newPrice").value;
+
+            if (newPhoto && newFoodName && newPrice) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var newRow = `
+                        <tr>
+                            <td><img src="${e.target.result}" alt="${newFoodName}"></td>
+                            <td>${newFoodName}</td>
+                            <td>RS.${newPrice}</td>
+                            <td><input type="file" name="editPhoto"></td>
+                            <td><input type="text" name="editFoodName" placeholder="Edit Food Name"></td>
+                            <td><input type="number" name="editPrice" placeholder="Edit Price"></td>
+                            <td><button class="editItem" onclick="editItem(this)">Edit Item</button></td>
+                        </tr>
+                    `;
+                    document.querySelector("#section-1 table").insertAdjacentHTML('beforeend', newRow);
+                };
+                reader.readAsDataURL(newPhoto);
+            } else {
+                alert("Please fill all fields to add a new item.");
+            }
+        }
+
+        function editItem(button) {
+            var row = button.closest("tr");
+            var editPhoto = row.querySelector("input[name='editPhoto']").files[0];
+            var editFoodName = row.querySelector("input[name='editFoodName']").value;
+            var editPrice = row.querySelector("input[name='editPrice']").value;
+
+            if (editFoodName) {
+                row.querySelector("td:nth-child(2)").textContent = editFoodName;
+            }
+            if (editPrice) {
+                row.querySelector("td:nth-child(3)").textContent = `RS.${editPrice}`;
+            }
+            if (editPhoto) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    row.querySelector("td:nth-child(1) img").src = e.target.result;
+                };
+                reader.readAsDataURL(editPhoto);
+            }
+        }
+    </script>
+</body>
+
+</html>

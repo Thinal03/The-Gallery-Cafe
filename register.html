@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('Resources/icons/registerbg2.jpg');
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #082535;
+            color: #ffffff;
+            padding: 0.2em;
+        }
+        
+        header h1 {
+            text-align: center;
+            -webkit-text-stroke: 0.5px black;
+        }
+        
+        .container {
+            display: flex;
+            margin-top: 100px;
+            margin-left: 400px;
+            margin-bottom: 100px;
+            width: 1000px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .left {
+            background-image: url('Resources/icons/register2.png');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            position: relative;
+        }
+        
+        .left-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        
+        .right {
+            padding: 40px;
+            width: 50%;
+        }
+        
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        input[type="tel"],
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        input[type="submit"] {
+            background: #ff4757;
+            color: #fff;
+            padding: 0.75rem;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        input[type="submit"]:hover {
+            background: #e84118;
+        }
+        
+        button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(33, 189, 12);
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        button:hover {
+            background-color: #333;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #082535;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            background-color: #082535;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <div class="logo">
+                            <img src="Resources/the galery cafe logo.png" alt="The Gallery Cafe" width="150px">
+                        </div>
+                    </td>
+                    <td>
+                        <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </header>
+
+
+
+    <div class="container">
+        <div class="left">
+
+        </div>
+        <div class="right">
+            <h2>Register</h2>
+            <form action="register.php" method="POST">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">E mail:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <div class="form-group">
+                    <label for="role">Role:</label>
+
+                    <select id="role" name="role" required>
+                    <option value="admin">Admin</option>
+                    <option value="customer">Customer</option>
+                    <option value="staff">Staff</option>
+                </select>
+                </div> <br>
+
+                <input type="submit" value="Register">
+            </form><br>
+            <div class="button-container">
+                <p>Allready you have a account </p>
+                <button onclick="document.location='login.html'">Sign In</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸 </h2>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="#specials">Specials</a></li>
+                <li><a href="index.html">Reservations</a></li>
+                <li><a href="#Feactures">Features and Facilities</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="index.html" target="_blank">Contact</a></li>
+
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* header */
+        
+        header {
+            background-color: #082535;
+            color: #fff;
+            padding: 1em 0;
+        }
+        
+        header h1 {
+            text-align: center;
+        }
+        /*body*/
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        .form-container,
+        .info-container {
+            flex: 1 1 45%;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-container {
+            background-color: #d49d37;
+            color: #fff;
+        }
+        
+        .info-container {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+        
+        .info-container p {
+            margin: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .form-container,
+            .info-container {
+                flex: 1 1 100%;
+            }
+        }
+        
+        .google-map {
+            padding-bottom: 50%;
+            position: relative;
+        }
+        
+        .google-map iframe {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #082535;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <div class="logo">
+                        <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe" width="150px">
+                    </div>
+                </td>
+                <td>
+                    <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸 </h2>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>SEND MESSAGE</h2>
+            <form id="messageForm" action="message.php" method="POST">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your Name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your Email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter your Phonenumber" name="phone" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Enter Subject" name="subject" required>
+
+                <label for="message">Enter your message...</label>
+                <textarea id="message" placeholder="Enter your Message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </div>
+        <div class="info-container">
+            <h2>CONTACT US</h2>
+            <p>PLEASE GET IN TOUCH</p>
+            <p>No:811, Galle Rd, Colombo 07.</p>
+            <p>📞 0112 112 112</p>
+            <p>📧 <a href="mailto:info@thegalerycafe.com">info@thegalerycafe.com</a></p>
+            <p>📠 0112 112 112</p>
+
+            <h2>Location</h2>
+            <div class="google-map">
+                <iframe src="https://flyk.com/map?drone#p=4.15/65.69/26" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="Feactures.html" target="_blank">Features and Facilities</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+
+</body>
+
+</html>

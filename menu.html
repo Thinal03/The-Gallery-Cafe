@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        /*header */
+        
+        header {
+            background-color: #082535;
+            color: #fff;
+            padding: 1em 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        header h1 {
+            text-align: center;
+            color: white;
+            -webkit-text-stroke: 0.5px black;
+        }
+        
+        header .icon-cart span {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            background-color: #ffbf00;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: -10px;
+        }
+        /*body*/
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cecccce1;
+            color: #000000;
+            position: relative;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #040404;
+        }
+        
+        h1 {
+            color: #e61b0c;
+        }
+        
+        .container .item {
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 30px;
+            text-align: center;
+        }
+        
+        .container .item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .container .item .price {
+            color: #000000;
+            font-size: 150%;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e4b013;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: rgb(244, 37, 37);
+        }
+        
+        button {
+            background-color: #e4b013;
+            color: #000000;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #bdc911db;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #082535;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container h2 {
+            color: white;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-container">
+        <header>
+            <div class="title">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="logo">
+                                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe" width="150px">
+                            </div>
+                        </td>
+                        <td>
+                            <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </header>
+    </div>
+
+
+
+
+    <br><br>
+    <a href="#section 1" class="btn"> Water Bottels </a>
+    <a href="#section 2" class="btn"> Milkshake </a>
+    <a href="#section 3" class="btn"> Mocktail </a>
+    <a href="#section 4" class="btn"> Mojito </a>
+    <a href="#section 5" class="btn"> Fruit Juice </a>
+    <a href="#section 6" class="btn"> Lassi </a>
+    <a href="#section 7" class="btn"> Smothie </a>
+    <a href="#section 8" class="btn"> Soft Drinks </a>
+    <a href="#section 9" class="btn"> Soup </a>
+    <a href="#section 10" class="btn"> Snacks </a>
+    <a href="#section 11" class="btn"> Western Meal </a>
+    <br><br>
+    <a href="#section 12" class="btn"> indian </a>
+    <a href="#section 121" class="btn"> Oven Fresh Breads </a>
+    <a href="#section 14" class="btn"> Kebabs and Tandoori </a>
+    <a href="#section 15" class="btn"> Biriyani </a>
+    <a href="#section 16" class="btn"> Chicken </a>
+    <a href="#section 17" class="btn"> Seafood </a>
+    <a href="#section 18" class="btn">  Beef & Mutton </a>
+    <a href="#section 13" class="btn"> Indian Special Dishes </a>
+    <br><br>
+    <a href="#section 212" class="btn"> Sri lankan </a>
+    <a href="#section 21" class="btn"> Soup </a>
+    <a href="#section 22" class="btn"> Rices / Bread </a>
+    <a href="#section 23 " class="btn"> Fish Currys </a>
+    <a href="#section 24" class="btn"> Cuttlefish </a>
+    <a href="#section 25" class="btn"> Prawns </a>
+    <a href="#section 26" class="btn">  Carb</a>
+    <a href="#section 27" class="btn">Chicken  </a>
+    <a href="#section 28" class="btn">  Mutton</a>
+    <a href="#section 29" class="btn">Vegetable</a>
+    <a href="#section 30" class="btn">Kottu</a>
+    <a href="#section 31" class="btn">Sri lanka Special Meals</a>
+    <br><br>
+    <a href="#section 322" class="btn">Italian</a>
+    <a href="#section 32" class="btn">Rice</a>
+    <a href="#section 33" class="btn">Bread</a>
+    <a href="#section 34" class="btn">Pasta</a>
+    <a href="#section 35" class="btn">Prizza</a>
+    <a href="#section 36" class="btn">Fish</a>
+    <a href="#section 37" class="btn">Meat</a>
+    <a href="#section 38" class="btn">Vegetable</a>
+    <a href="#section 39" class="btn">Wine</a>
+    <br><br>
+    <a href="#section 40" class="btn">Chinese</a>
+    <a href="#section 41" class="btn">Pastry</a>
+    <a href="#section 42" class="btn">Dumplings</a>
+    <a href="#section 43" class="btn">Soup</a>
+    <a href="#section 44" class="btn">Rice</a>
+    <a href="#section 45" class="btn">Meat</a>
+    <br><br>
+    <a href="#section 46" class="btn"> Desert </a>
+
+
+
+
+
+    <div class="container">
+        <h1>Drinks</h1>
+        <div class id="section 1">
+            <h2>Bottled Water</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/waterbottel small.jpeg" alt="Water Bottle Small">
+                            <h2>Water Bottle Small 500ml</h2>
+                            <div class="price">RS.300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/waterbottel medium.jpeg" alt="Water Bottle Medium">
+                            <h2>Water Bottle Medium 1L</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class id="section 2">
+            <h2>Milkshake</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Vanila Milkshake.jpeg" alt="Vanilla Milkshake">
+                            <h2>Vanilla Milkshake</h2>
+                            <div class="price">RS.800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Banana Milkshake.jpeg" alt="Banana Milkshake">
+                            <h2>Banana Milkshake</h2>
+                            <div class="price">RS.800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/chocolate Milkshake.jpeg" alt="Chocolate Milkshake">
+                            <h2>Chocolate Milkshake</h2>
+                            <div class="price">RS.900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Avercado milkshake.jpeg" alt="Avocado Milkshake">
+                            <h2>Avocado Milkshake</h2>
+                            <div class="price">RS.840</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 3">
+            <h2>Mocktail</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/pina colada mocktail.jpeg" alt=" Pina Colada  ">
+                            <h2> Pina Colada </h2>
+                            <div class="price">RS.700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/sweethart mocktail.jpeg" alt=" Sweetheart">
+                            <h2>Sweetheart</h2>
+                            <div class="price">RS.750</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/Aquanga Mangot mocktai.jpeg" alt=" Aquanga Mango ">
+                            <h2>Aquanga Mangot </h2>
+                            <div class="price">RS.740</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 4">
+            <h2>Mojito</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/lime mojito.jpeg " alt="Lime Mojito ">
+                            <h2> Lime Mojito </h2>
+                            <div class="price">RS.680</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/passon mojito.jpeg" alt="Passon Mojito ">
+                            <h2>Passon Mojito </h2>
+                            <div class="price">RS.650</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/strawberry mojito.jpeg " alt=" Strawberry Mojito">
+                            <h2> Strawberry Mojito</h2>
+                            <div class="price">RS.710</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/green apple  mojito.jpeg " alt=" Green Apple Mojito ">
+                            <h2>Green Apple Mojito </h2>
+                            <div class="price">RS.780</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/blue mint  mojito.jpeg " alt="Blue Mint Mojito  ">
+                            <h2>Blue Mint Mojito </h2>
+                            <div class="price">RS.800</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 5">
+            <h2>Fruit Juice </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/Fruit Juice - Lime.jpg" alt="Fruit Juice - Lime ">
+                            <h2> Fruit Juice - Lime </h2>
+                            <div class="price">RS.600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Fruit Juice papaya.jpeg " alt=" Fruit Juice - papaya">
+                            <h2>Fruit Juice - papaya </h2>
+                            <div class="price">RS.520</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Fruit Juice melon.jpeg" alt="Fruit Juice - Melon ">
+                            <h2>Fruit Juice - Melon </h2>
+                            <div class="price">RS.510</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/fruit juice pineapple.jpeg " alt="Fruit Juice - Pineapple ">
+                            <h2> Fruit Juice - Pineapple </h2>
+                            <div class="price">RS.540</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/fruit juice orenage.jpeg" alt="Fruit Juice - Orange ">
+                            <h2> Fruit Juice - Orange </h2>
+                            <div class="price">RS.540</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Fruit Juice - mango.jpg " alt="Fruit Juice - Mango ">
+                            <h2> Fruit Juice - Mango </h2>
+                            <div class="price">RS.520</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Fruit Juice - avercado.jpg " alt=" Fruit Juice - Avocado ">
+                            <h2> Fruit Juice - Avocado </h2>
+                            <div class="price">RS.560</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/fruit juice mixed.jpeg " alt=" Fruit Juice - Mixed ">
+                            <h2> Fruit Juice - Mixed </h2>
+                            <div class="price">RS.440</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 6">
+            <h2>Lassi</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/sweet lassi.jpg" alt="Sweet Lassi ">
+                            <h2> Sweet Lassi </h2>
+                            <div class="price">RS.740</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/banana lassi.jpeg " alt="Banana Lassi">
+                            <h2>Banana Lassi </h2>
+                            <div class="price">RS.760</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 7">
+            <h2>Smothie</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/avercado smoothie.jpeg" alt="Avocado Smoothie ">
+                            <h2> Avocado Smoothie</h2>
+                            <div class="price">RS.740</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Banana smoothie.jpeg" alt="Banana Smoothie">
+                            <h2>Banana Smoothie</h2>
+                            <div class="price">RS.720</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/mango smoothie.jpeg" alt=" Mango Smoothie">
+                            <h2>Mango Smoothie</h2>
+                            <div class="price">RS.710</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/Avercado milkshake.jpeg" alt=" Strawberry Smoothie">
+                            <h2>Strawberry Smoothie </h2>
+                            <div class="price">RS.700</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class id="section 8">
+            <h2> Soft Drinks </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/pepsi.jpeg " alt="Pepsi">
+                            <h2> Pepsi </h2>
+                            <div class="price">RS.200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/mountan dew.jpeg" alt="Mountan Dew">
+                            <h2>Mountan Dew </h2>
+                            <div class="price">RS.200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src=" Resources/menu/Drinks/mirinda.jpeg" alt="Mirinda ">
+                            <h2> Mirinda </h2>
+                            <div class="price">RS.200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Drinks/7up.jpeg " alt="7 Up ">
+                            <h2>7 Up </h2>
+                            <div class="price">RS.200</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 9">
+            <h2>Soup</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Soup of The Day.jpeg" alt="Soup of The day ">
+                            <h2> Soup of The day </h2>
+                            <div class="price">RS.800</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class id="section 10">
+            <h2> Snacks </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Snacks club sandwich.jpg" alt="Club Sandwich ">
+                            <h2>Club Sandwich </h2>
+                            <div class="price">RS.600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/snacks tuna sandwich.jpeg" alt="Tuna Sandwich ">
+                            <h2>Tuna Sandwich</h2>
+                            <div class="price">RS.1000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Snaks Crispy Fish Burger.jpg" alt="Crispy Fish Burge ">
+                            <h2>Crispy Fish Burger</h2>
+                            <div class="price">RS.1400</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Snaks Beef Burger.jpeg  " alt=" Beef Burger ">
+                            <h2>Beef Burger</h2>
+                            <div class="price">RS.1700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Sanks chicken burger.jpg  " alt="Crispy Chicken Burger ">
+                            <h2>Crispy Chicken Burger</h2>
+                            <div class="price">RS.1600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Snacks tanddri chicken sandwich.jpeg  " alt="Tandoori Chicken Sandwich ">
+                            <h2> Tandoori Chicken Sandwich</h2>
+                            <div class="price">RS.800</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 11">
+            <h2>Western Meal</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Western Drumstick Trio.jpeg" alt="Drumstick">
+                            <h2>Drumstick</h2>
+                            <div class="price">RS.410</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Western Grill Chicken Half.jpeg" alt="Grill Chicken">
+                            <h2>Grill Chicken</h2>
+                            <div class="price">RS.700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Western Fried Chicken Small.jpeg" alt="Fried Chicken">
+                            <h2>Fried Chicken</h2>
+                            <div class="price">RS.450</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Western french fries.jpeg" alt="French fries">
+                            <h2>French fries</h2>
+                            <div class="price">RS.600</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Western  fish and chips.jpg" alt="fish and chips">
+                            <h2>fish and chips</h2>
+                            <div class="price">RS.590</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Western batter fried prawns.jpg" alt="Batter fried prawns">
+                            <h2>Batter fried prawns</h2>
+                            <div class="price">RS.1200</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 12">
+            <h1>Indian</h1>
+            <div class id="section 121"></div>
+            <h2>Oven Fresh Breads</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Parata.jpeg" alt="Parata">
+                            <h2>Parata</h2>
+                            <div class="price">RS.200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Chapathi.jpg" alt="Chapathi">
+                            <h2>Chapathi</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Naan.jpg" alt="Naan">
+                            <h2>Naan</h2>
+                            <div class="price">RS.350</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Butter Naan.jpeg" alt="Butter Naan">
+                            <h2>Butter Naan</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Garlic Batter Naan.jpeg" alt="Garlic Batter Naan">
+                            <h2>Garlic Batter Naan</h2>
+                            <div class="price">RS.450</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Rumali.jpeg" alt="Rumali">
+                            <h2>Rumali</h2>
+                            <div class="price">RS.420</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Cheese Naan.jpeg" alt="Cheese Naan">
+                            <h2>Cheese Naan</h2>
+                            <div class="price">RS.500</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 13">
+            <h2>Indian Special Dishes </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/special indian cicken dish 1.jpg" alt="Chicken 65">
+                            <h2>Chicken 65 </h2>
+                            <div class="price">RS.4200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/special indian cihcken dish 2.jpg" alt="Paneer 65">
+                            <h2>Paneer 65</h2>
+                            <div class="price">RS.4300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/special indian mushroom dish.jpeg" alt="Mashroom 65">
+                            <h2>Mashroom 65</h2>
+                            <div class="price">RS.4200</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 14">
+            <h2>Kebabs and Tandoori</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/murag kebab.jpeg" alt="Murag Kebab">
+                            <h2>Murag Kebab</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/kalimiri kebab.jpeg" alt="Kalimiri Kebab">
+                            <h2>Kalimiri Kebab</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Hariyana Chiken Kebab.jpeg" alt="Hariyana Chiken Kebab">
+                            <h2>Hariyana Chiken Kebab</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Chicken Shish Kebab.jpg" alt="Chicken Shish Kebab">
+                            <h2>Chicken Shish Kebab</h2>
+                            <div class="price">RS.3500</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Beef Shish Kebab.jpeg" alt="Beef Shish Kebab">
+                            <h2>Beef Shish Kebab</h2>
+                            <div class="price">RS.3100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Tandoori chicken biriyani.jpg" alt="Tandoori Chicken">
+                            <h2>Tandoori Chicken</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 15">
+            <h2> Biriyani </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Chicken biriyani.jpg" alt="Chicken Biriyani">
+                            <h2>Chicken Biriyani</h2>
+                            <div class="price">RS.4400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Tandoori chicken biriyani.jpg" alt="Tandoori Chicken Biriyani">
+                            <h2>Tandoori Chicken Biriyani</h2>
+                            <div class="price">RS.4700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Prawn biriyani.jpg" alt="Prawn Biryani">
+                            <h2>Prawn Biryani</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Fish Biriyani.jpg" alt="Fish Biriyani">
+                            <h2>Fish Biriyani </h2>
+                            <div class="price">RS.4100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Beef Biriyani.jpeg" alt="Beef Biriyani">
+                            <h2>Beef Biriyani</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Vegetable biriyani.jpeg" alt="Vegetable Biriyani">
+                            <h2>Vegetable Biriyani</h2>
+                            <div class="price">RS.4400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 16">
+            <h2>Chicken </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Chicken Masala.jpeg" alt="Chicken Masala">
+                            <h2>Chicken Masala</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Chicken Kuruma.jpg" alt="Chicken Kuruma">
+                            <h2>Chicken Kuruma</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Kandoori Spicy Chicken.jpeg" alt="Kandoori Spicy Chicken">
+                            <h2>Kandoori Spicy Chicken</h2>
+                            <div class="price">RS.3700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Butter Chicken.jpg" alt="Butter Chicken">
+                            <h2>Butter Chicken</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Chicken Kadai.jpg" alt="Chicken Kadai">
+                            <h2>Chicken Kadai</h2>
+                            <div class="price">RS.3700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Chicken Tikka Masala.jpg" alt="Chicken Tikka Masala">
+                            <h2>Chicken Tikka Masala</h2>
+                            <div class="price">RS.3600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Chicken Makhani.jpeg" alt="Chicken Makhani">
+                            <h2>Chicken Makhani</h2>
+                            <div class="price">RS.3900</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 17">
+            <h2>Seafood </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Seer Fish Masala.jpg" alt="Seer Fish Masala">
+                            <h2>Seer Fish Masala</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Prawns Masala.jpeg" alt="Prawns Masala">
+                            <h2>Prawns Masala</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 18">
+            <h2>Beef & Mutton</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Beef Masala.jpeg" alt=" ">
+                            <h2>Beef Masala</h2>
+                            <div class="price">RS.6400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Beef Kuruma.jpeg" alt="Beef Kuruma">
+                            <h2>Beef Kuruma</h2>
+                            <div class="price">RS.6300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Kandoori Spicy Beef.jpg" alt="Kandoori Spicy Beef">
+                            <h2>Kandoori Spicy Beef</h2>
+                            <div class="price">RS.5000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Beef Kadai.jpeg" alt="Beef Kadai">
+                            <h2>Beef Kadai</h2>
+                            <div class="price">RS.5300</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Mutton Kurma.jpeg" alt="Mutton Kurma">
+                            <h2>Mutton Kurma</h2>
+                            <div class="price">RS.5100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Mutton Kurma.jpeg" alt=" ">
+                            <h2>Mutton Kadai</h2>
+                            <div class="price">RS.5400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Mutton Masala.jpeg" alt="Mutton Masala">
+                            <h2>Mutton Masala</h2>
+                            <div class="price">RS.5600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Indian Mutton Hidrabadi.jpeg" alt="Mutton Hidrabadi">
+                            <h2>Mutton Hidrabadi</h2>
+                            <div class="price">RS.6000</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 19">
+            <h2>Vegetables </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Vegetable Chop Suey.jpeg" alt="Vegetable Chop Suey">
+                            <h2>Vegetable Chop Suey</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Cashew Paneer.jpeg" alt="Cashew Paneer">
+                            <h2>Cashew Paneer</h2>
+                            <div class="price">RS.2200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Channa Masala.jpg" alt="Channa Masala">
+                            <h2>Channa Masala</h2>
+                            <div class="price">RS.2100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Dhal Fry (Thoor).jpg" alt="Dhal Fry (Thoor)">
+                            <h2>Dhal Fry (Thoor)</h2>
+                            <div class="price">RS.2500</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Dhal Fry (Thoor).jpg" alt="Bhindi Masala">
+                            <h2>Bhindi Masala</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Mashroom & Bell Pepper Masala.jpeg" alt="Mashroom & Bell Pepper Masala">
+                            <h2>Mashroom & Bell Pepper Masala</h2>
+                            <div class="price">RS.2500</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Mixed Vegetable Curry.jpg" alt="Mixed Vegetable Curr">
+                            <h2>Mixed Vegetable Curry</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Alu Gobi Masala.jpg" alt="Alu Gobi Masala">
+                            <h2>Alu Gobi Masala</h2>
+                            <div class="price">RS.2100</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Alu Matar.jpeg" alt="Alu Matar">
+                            <h2>Alu Matar</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Butter Paneer.jpeg" alt="Butter Paneer">
+                            <h2>Butter Paneer</h2>
+                            <div class="price">RS.2000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Palak Paneer.jpeg" alt="Palak Paneer">
+                            <h2>Palak Paneer</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div class id="section 20">
+            <h2>Indian - Sawans </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Chicken Biriyani Sawan.jpeg" alt="Chicken Biriyani Sawan">
+                            <h2>Chicken Biriyani Sawan</h2>
+                            <div class="price">RS.7400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Mutton Biriyani Sawan.jpeg" alt="Mutton Biriyani Sawan">
+                            <h2>Mutton Biriyani Sawan</h2>
+                            <div class="price">RS.7300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Prawns Biryani Sawan.jpeg" alt="Prawns Biryani Sawan">
+                            <h2>Prawns Biryani Sawan</h2>
+                            <div class="price">RS.7000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Fish Biriyani Sawan.jpeg" alt="Fish Biriyani Sawan">
+                            <h2>Fish Biriyani Sawan</h2>
+                            <div class="price">RS.7500</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Foods/Beef Biriyani Sawan.jpeg" alt="Beef Biriyani Sawan">
+                            <h2>Beef Biriyani Sawan</h2>
+                            <div class="price">RS.7400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 212">
+            <h1>Sri lankan</h1>
+            <div class id="section 21"></div>
+            <h2>Soup</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/soup Buridda.jpg" alt="Buridda Soup Bowl">
+                            <h2>Buridda Soup Bowl</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/soup Bagnun.png" alt="Bagnun Soup Bowl">
+                            <h2>Bagnun Soup Bowl</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/soup Agliata.jpg" alt="Agliata Soup Bowl">
+                            <h2>Agliata Soup Bowl</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 22">
+            <h2>RICES / BREAD</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Roast pan.jpg" alt="Roast paan">
+                            <h2>Roast paan</h2>
+                            <div class="price">RS.140</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Keeri samba.jpg" alt="Keeri samba">
+                            <h2>Keeri samba</h2>
+                            <div class="price">RS.1900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Rathu kakulu.jpg" alt="Rathu kakulu">
+                            <h2>Rathu kakulu</h2>
+                            <div class="price">RS.1400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Basmathi.jpg" alt="Basmathi">
+                            <h2>Basmathi</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Yellow Rice.jpg" alt="Yellow Rice">
+                            <h2>Yellow Rice </h2>
+                            <div class="price">RS.1900</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/rice Fried Rice.jpg" alt="Fried Rice">
+                            <h2>Fried Rice </h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/rice Bamboo Biriyani.jpg" alt="Bamboo Biriyani">
+                            <h2>Bamboo Biriyani</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Chicken Biriyani.jpg" alt="Chicken Biriyani">
+                            <h2>Chicken Biriyani</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/rice Lamprais.jpg" alt="Lamprais">
+                            <h2>Lamprais</h2>
+                            <div class="price">RS.4100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/rice Kachal Rice.jpg" alt="Kachal Rice">
+                            <h2>Kachal Rice</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 23">
+            <h2>Fish Currys</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Maalu Mirisata.jpg" alt="Maalu Mirisata">
+                            <h2>Maalu Mirisata</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Maalu Ambulthiyal.jpg" alt="Maalu Ambulthiyal">
+                            <h2>Maalu Ambulthiyal</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Maalu Ambulthiyal.jpg" alt="Maalu Themparadu Karala">
+                            <h2>Maalu Themparadu Karala</h2>
+                            <div class="price">RS.3100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Maalu Suduwata.jpg" alt="Maalu Suduwata">
+                            <h2>Maalu Suduwata</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Maalu Devilled.jpg" alt="Maalu Devilled">
+                            <h2>Maalu Devilled</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Maalu Stew.jpg" alt="Maalu Stew">
+                            <h2>Maalu Stew</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Fried Seer Fish.jpg" alt="Fried Seer Fish">
+                            <h2>Fried Seer Fish</h2>
+                            <div class="price">RS.2800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Fish Mackerel Curry.jpg" alt="Mackerel Curry">
+                            <h2>Mackerel Curry</h2>
+                            <div class="price">RS.2800</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 24">
+            <h2>CUTTLEFISH</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Cuttlefish Dalla Rathata, Sarata.jpg" alt="Dalla Rathata, Sarata">
+                            <h2>Dalla Rathata, Sarata</h2>
+                            <div class="price">RS.4400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/cuttlefish Hot Butter Cuttlefish.jpg" alt="Hot Butter Cuttlefish">
+                            <h2>Hot Butter Cuttlefish</h2>
+                            <div class="price">RS.4100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Cuttlefish Dallo Devilled.jpg" alt="Dallo Devilled">
+                            <h2>Dallo Devilled</h2>
+                            <div class="price">RS.4900</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 25">
+            <h2>PRAWNS</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Isso Yapanaya kramayata.jpg" alt="Isso Yapanaya kramayata">
+                            <h2>Isso Yapanaya kramayata</h2>
+                            <div class="price">RS.2300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Isso Stew.jpg" alt="Isso Stew">
+                            <h2>Isso Stew</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Isso Themperadu.jpg" alt="Isso Themperadu">
+                            <h2>Isso Themperadu</h2>
+                            <div class="price">RS.2800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Isso Devilled.jpg" alt="Isso Devilled">
+                            <h2>Isso Devilled</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Hot Butter Isso.jpg" alt="Hot Butter Isso">
+                            <h2>Hot Butter Isso</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 26">
+            <h2>CRAB</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Kakuluwo Negombo Kramayata.jpg" alt="Kakuluwo Negombo Kramayata">
+                            <h2>Kakuluwo Negombo Kramayata</h2>
+                            <div class="price">RS.5400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Lankan Chilli Kakuluwo.jpg" alt="Lankan Chilli Kakuluwo">
+                            <h2>Lankan Chilli Kakuluwo</h2>
+                            <div class="price">RS.4600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Crab Tempered Dry Curry.jpg" alt="Crab Tempered Dry Curry">
+                            <h2>Crab Tempered Dry Curry</h2>
+                            <div class="price">RS.4200</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 27">
+            <h2>CHICKEN</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Kukulmas Yapanaya Kramayata.jpg" alt="Kukulmas Yapanaya Kramayata">
+                            <h2>Kukulmas Yapanaya Kramayata</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Kukulmas Kaluwata Uyala.jpg" alt="Kukulmas Kaluwata Uyala">
+                            <h2>Kukulmas Kaluwata Uyala</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Kukulmas Themparadu.jpg" alt="Kukulmas Themparadu">
+                            <h2>Kukulmas Themparadu</h2>
+                            <div class="price">RS.2900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Meat Balls Kirata ,Devilled.jpg" alt="Meat Balls Kirata / Devilled">
+                            <h2>Meat Balls Kirata / Devilled</h2>
+                            <div class="price">RS.3000</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Hot Butter Chicken.jpg" alt="Hot Butter Chicken">
+                            <h2>Hot Butter Chicken</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 28">
+            <h2>MUTTON</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Elu Mas Rathata.jpg" alt="Elu Mas Rathata">
+                            <h2>Elu Mas Rathata</h2>
+                            <div class="price">RS.4400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Elu Mas Yapanaya Kramayata.jpg" alt="Elu Mas Yapanaya Kramayata">
+                            <h2>Elu Mas Yapanaya Kramayata</h2>
+                            <div class="price">RS.4900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Elu Mas Stew.jpg" alt="Elu Mas Stew">
+                            <h2>Elu Mas Stew</h2>
+                            <div class="price">RS.4500</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Elu Mas Devilled (Boneless).jpg" alt="Elu Mas Devilled">
+                            <h2>Elu Mas Devilled</h2>
+                            <div class="price">RS.4800</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Elu Mas Themparadu.jpg" alt="Elu Mas Themparadu">
+                            <h2>Elu Mas Themparadu</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 29">
+            <h2>VEGETABLES</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Soya Curry , Devilled.jpg" alt="Soya Curry / Devilled">
+                            <h2>Soya Curry / Devilled</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Stuffed Capsicum.jpg" alt="veg Stuffed Capsicum">
+                            <h2>veg Stuffed Capsicum</h2>
+                            <div class="price">RS.2600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Beetroot Curry.jpg" alt="Beetroot Curry">
+                            <h2>Beetroot Curry</h2>
+                            <div class="price">RS.1400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Pumpkin Curry.jpg" alt="Pumpkin Curry">
+                            <h2>Pumpkin Curry</h2>
+                            <div class="price">RS.2300</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Tempered Potato Curry.jpg" alt="Tempered Potato / Curry">
+                            <h2>Tempered Potato / Curry</h2>
+                            <div class="price">RS.2800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Mango Curry.jpg" alt="Mango Curry">
+                            <h2>Mango Curry</h2>
+                            <div class="price">RS.2200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Beans Curry.jpg" alt="Beans Curry">
+                            <h2>Beans Curry</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Dhal Curry.jpg" alt="Dhal Curry">
+                            <h2>Dhal Curry</h2>
+                            <div class="price">RS.2500</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Tempered Pineapple.jpg" alt="Tempered Pineapple">
+                            <h2>Tempered Pineapple</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Polos Curry.jpg" alt="Polos Curry">
+                            <h2>Polos Curry</h2>
+                            <div class="price">RS.2100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Kaju Maluwa.jpg" alt="Kaju Maluwa">
+                            <h2>Kaju Maluwa</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/veg Batu Mojuwa.jpg" alt="Batu Mojuwa ">
+                            <h2>Batu Mojuwa </h2>
+                            <div class="price">RS.2100</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 30">
+            <h2>KOTTU</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Kottu.jpg" alt="Chicken Kottu">
+                            <h2>Chicken Kottu</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/mutton kottu.jpg" alt="Mutton Kottu">
+                            <h2>Mutton Kottu</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Cheesy Nai Miri.jpg" alt="Cheesy Nai Miris">
+                            <h2>Cheesy Nai Miris</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Kottu.jpg" alt="Masala Kottu">
+                            <h2>Masala Kottu</h2>
+                            <div class="price">RS.2200</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 31">
+            <h2>Special Sri lanka Meals </h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/PITTU.jpg" alt="PITTU">
+                            <h2>PITTU </h2>
+                            <div class="price">RS.1000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/STRING HOPPERS.jpg" alt="STRING HOPPERS">
+                            <h2>STRING HOPPERS </h2>
+                            <div class="price">RS.1600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/HOPPERS.jpg" alt="HOPPERS">
+                            <h2>HOPPERS</h2>
+                            <div class="price">RS.300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/pol rotti.jpg" alt="POL ROTTI">
+                            <h2>POL ROTTI</h2>
+                            <div class="price">RS.250</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/EGG ROTTI.jpg" alt="EGG ROTTI">
+                            <h2>EGG ROTTI</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/The Galery  Tasting Basket 2.jpg" alt="The Galery  Tasting Basket">
+                            <h2>The Galery Tasting Basket</h2>
+                            <div class="price">RS.4000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/Rice and Curry Special 3.jpg" alt="Rice and Curry Special">
+                            <h2>Rice and Curry Special</h2>
+                            <div class="price">RS.4500</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Sri lankan Food/The Galery Special Chicken Kottu 1.jpg" alt="The Galery Special Chicken Kottu">
+                            <h2>The Galery Special Chicken Kottu</h2>
+                            <div class="price">RS.4600</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class id="section 322">
+            <h1>Italian</h1>
+            <div class id="section 32"></div>
+            <h2>Rice</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Rice Arancine.jpg" alt="Arancine">
+                            <h2>Arancine</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Rice Insalata_di_riso.jpg" alt="Insalata">
+                            <h2>Insalata</h2>
+                            <div class="price">RS.3900</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Rice Supplì.jpg" alt="Supplì">
+                            <h2>Supplì</h2>
+                            <div class="price">RS.4500</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 33">
+            <h2>Bread</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Bread Crescentine.jpg" alt="Crescentine">
+                            <h2>Crescentine</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Bread Coppia-ferrarese.jpg" alt="Coppia-ferrarese">
+                            <h2>Coppia-ferrarese</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Bread Bruschetta.jpg" alt="Bruschetta">
+                            <h2>Bruschetta</h2>
+                            <div class="price">RS.2200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Bread Borlengo.jpg" alt="Borlengo">
+                            <h2>Borlengo</h2>
+                            <div class="price">RS.1400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 34">
+            <h2>Pasta</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/pasta -Culurgiones.jpg" alt="Culurgiones">
+                            <h2>Culurgiones</h2>
+                            <div class="price">RS.6400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Pasta Casunziei.jpg" alt="Casunziei">
+                            <h2>Casunziei</h2>
+                            <div class="price">RS.6300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Passta Busiate.jpg" alt="Busiate">
+                            <h2>Busiate</h2>
+                            <div class="price">RS.6600</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Pasta Agnolini_mantovani.jpg" alt="Agnolini mantovani">
+                            <h2>Agnolini mantovani</h2>
+                            <div class="price">RS.5400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 35">
+            <h2>Prizza</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Prizza calzone.jpg" alt="calzone">
+                            <h2>calzone</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Prizza Seafood_pizza.jpg" alt="Seafood Pizza">
+                            <h2>Seafood pizza</h2>
+                            <div class="price">RS.4400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Pizza quattro formaggi.jpg" alt="Quattro formaggi">
+                            <h2>Quattro formaggi</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/pizza Roman pizza.jpg" alt=" Roman Pizza">
+                            <h2> Roman Pizza</h2>
+                            <div class="price">RS.3700</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 36">
+            <h2>Fish</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/fish Carpaccio.jpg" alt="Carpaccio">
+                            <h2>Carpaccio</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/fish Panettone.jpg" alt="Panettone">
+                            <h2>Panettone</h2>
+                            <div class="price">RS.4400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/fish-Cacciucco.jpg" alt="Cacciucco">
+                            <h2>Cacciucco</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/fish Acqua_pazza.jpg" alt="Acqua pazza">
+                            <h2>Acqua pazza</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 37">
+            <h2>Meat</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/Meat Arrosticini-.jpg" alt="Arrosticini">
+                            <h2>Arrosticini</h2>
+                            <div class="price">RS.5400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/meat Bistecca alla fiorentina.jpg" alt="Bistecca alla fiorentina">
+                            <h2>Bistecca alla fiorentina</h2>
+                            <div class="price">RS.5300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/meat bruscitti.jpg" alt="bruscitti">
+                            <h2>bruscitti</h2>
+                            <div class="price">RS.5800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/meat Abbacchio.jpg" alt="Abbacchio">
+                            <h2>Abbacchio</h2>
+                            <div class="price">RS.6300</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class id="section 38">
+            <h2>Vegetable</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/veg Acquasale.jpg" alt="Acquasale">
+                            <h2>Acquasale</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/veg Caponata_.jpg" alt="Caponata">
+                            <h2>Caponata</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/veg Ciambotta.jpg" alt="Ciambotta">
+                            <h2>Ciambotta</h2>
+                            <div class="price">RS.2300</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/veg GiardinieraSpicy.JPG" alt="GiardinieraSpicy">
+                            <h2>Giardiniera Spicy</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/veg Parmigiana_di_melanzane.jpg" alt="Parmigiana di melanzane">
+                            <h2>Parmigianadi melanzane</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/veg rollatini.jpg" alt="rollatini">
+                            <h2>rollatini</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 39">
+            <h2>Wine</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/wine Aglianico_del_vulture_.jpg" alt="Aglianico del vulture_">
+                            <h2>Aglianico del vulture </h2>
+                            <div class="price">RS.10 000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/wine Falanghina_di_Bonea.JPG" alt="Falanghina di Bonea">
+                            <h2>Falanghina di Bonea</h2>
+                            <div class="price">RS.8000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/wine Franciacorta_milledi.jpg" alt="Franciacorta milledi">
+                            <h2>Franciacorta milledi</h2>
+                            <div class="price">RS.9000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/wine Lacrima_Christi,_.jpg" alt="Lacrima Christi">
+                            <h2>Lacrima Christi</h2>
+                            <div class="price">RS.10 400</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Italian Food/wine lambrusco.jpg" alt="lambrusco ">
+                            <h2>lambrusco</h2>
+                            <div class="price">RS.9400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 40">
+            <h1>Chinese</h1><br>
+            <div class id="section 41"></div>
+            <h2>Pastry</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Pastry Char_siu_bao.jpg" alt="Char_siu_bao">
+                            <h2>Char_siu_bao</h2>
+                            <div class="price">RS.1400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Pastry Mooncake.jpg" alt="Mooncake">
+                            <h2>Mooncake</h2>
+                            <div class="price">RS.1000</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Pastry Shaobing5.jpg" alt="Shaobing5">
+                            <h2>Shaobing5</h2>
+                            <div class="price">RS.1200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Pastry Spring_onion_pancake.JPG" alt="Spring_onion_pancake">
+                            <h2>Spring onion pancake</h2>
+                            <div class="price">RS.1400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 42">
+            <h2>Dumplings</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Dumplings Mantou.jpg" alt="Mantou">
+                            <h2>Mantou</h2>
+                            <div class="price">RS.3400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Dumplings Xiao_Long_Bao.jpg" alt="Xiao_Long_Bao">
+                            <h2>Xiao Long Bao</h2>
+                            <div class="price">RS.3200</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Dumplings-Baozi_Chengdu.jpg" alt="Baozi_Chengdu">
+                            <h2>Baozi Chengdu</h2>
+                            <div class="price">RS.3500</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 43">
+            <h2>Soup</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Soup hot pot.JPG" alt="Hot pot">
+                            <h2>Hot pot</h2>
+                            <div class="price">RS.2100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Soup Hot-and-Sour-Soup-Bowl.jpg" alt="Hot-and-Sour-Soup-Bowl">
+                            <h2>Hot and Sour Soup Bowl</h2>
+                            <div class="price">RS.2400</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Sweet-and-sour_pork.jpg " alt="Sweet-and-sour_pork">
+                            <p>Sweet and sour pork</p>
+                            <div class="price">RS.2500</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 44"></div>
+        <h2>Rice</h2>
+        <table>
+            <tr>
+                <td>
+                    <div class="item">
+                        <img src="Resources/menu/Chinese food/fired rice.JPG" alt="fired rice">
+                        <h2>fired rice</h2>
+                        <div class="price">RS.3500</div>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="item">
+                        <img src="Resources/menu/Chinese food/white rice.jpg" alt="white rice">
+                        <h2>white rice</h2>
+                        <div class="price">RS.3000</div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+        <div class id="section 45">
+            <h2>Meat</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/chiccken mango chilli chicken.jpg" alt="Mango chilli chicken">
+                            <h2>Mango chilli chicken</h2>
+                            <div class="price">RS.5100</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Charsiu.jpg" alt="Charsiu">
+                            <h2>Charsiu</h2>
+                            <div class="price">RS.4800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/chicken Kung-pao-shanghai.jpg" alt="Kung-pao-shanghai">
+                            <h2>Kung-pao-shanghai</h2>
+                            <div class="price">RS.4700</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/chicken sesame-chicken-1.webp" alt="Sesame chicken">
+                            <h2>Sesame chicken</h2>
+                            <div class="price">RS.4200</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Twice cooked pork.jpg" alt="Twice cooked pork">
+                            <h2>Twice cooked pork</h2>
+                            <div class="price">RS.4500</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Chinese food/Braised_pork_in_brown_sauce.jpg" alt="Braised_pork_in_brown_sauce">
+                            <h2>Braised pork in brown sauce</h2>
+                            <div class="price">RS.4000</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class id="section 46">
+            <h2>Desert</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Biscuit Pudding.jpeg" alt="Biscuit Pudding">
+                            <h2>Biscuit Pudding</h2>
+                            <div class="price">RS.450</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Fruit Salad with Ice Cream.jpeg" alt="Fruit Salad with Ice Cream">
+                            <h2>Fruit Salad with Ice Cream</h2>
+                            <div class="price">RS.800</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Fruit Salad.jpeg" alt="Fruit Salad">
+                            <h2>Fruit Salad</h2>
+                            <div class="price">RS.640</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Ice Cream.jpeg" alt="Ice Cream">
+                            <h2>Ice Cream</h2>
+                            <div class="price">RS.600</div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Gulab Jamun.jpeg" alt="Gulab Jamun">
+                            <h2>Gulab Jamun</h2>
+                            <div class="price">RS.410</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Kulfi.jpeg" alt="Kulfi">
+                            <h2>Kulfi</h2>
+                            <div class="price">RS.500</div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            <img src="Resources/menu/Desert/Watalappam.jpg" alt="Watalappam">
+                            <h2>Watalappam</h2>
+                            <div class="price">RS.400</div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h2>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="#menus">Menu</a></li>
+                <li><a href="Feactures.html" target="_blank">Features and Facilities</a></li>
+
+
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+</body>
+
+</html>

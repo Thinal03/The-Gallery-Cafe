@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: rgb(101, 98, 98);
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .logout {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .logout:hover {
+            background-color: #443838;
+        }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 40px);
+        }
+        
+        .sidebar {
+            width: 250px;
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .sidebar h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 4px;
+        }
+        
+        .sidebar ul li a:hover {
+            background-color: #555;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .container-dash {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            justify-items: center;
+        }
+        
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .card img {
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .card h3 {
+            margin: 15px 0;
+        }
+        
+        .card button {
+            background-color: #ff4b5c;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .card button:hover {
+            background-color: #e0434f;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>The Gallery Cafe</h1>
+
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h1>ADMIN PANEL</h1>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="reservation.php" target="_parent">Reservation</a></li>
+                <li><a href="user.php" target="_parent">Users</a></li>
+                <li><a href="menu.html" target="_parent">Menu</a></li>
+                <li><a href="features.html">Features & Facilities</a></li>
+                <li><a href="userMessage.php" target="_parent">User Queries</a></li>
+                <li><a href="foododer.php" target="_parent">Food Oders</a></li>
+                <li><a href="settings.html" target="_parent">Settings</a></li><br>
+                <center>
+                    <li><a href="../login.html" target="_parent">Log Out </a></li>
+                </center>
+
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Dashboard</h2>
+            <div class="container-dash">
+                <div class="card">
+                    <img src="../Admin/resources/rsesrvation02.png" alt="">
+                    <h3>Reservations</h3>
+                    <button onclick="document.location='reservation.php'">Go To Setting</button>
+
+                </div>
+
+                <div class="card">
+                    <img src="../Admin/resources/user2.png" alt="Users">
+                    <h3>Users</h3>
+                    <button onclick="document.location='user.php'">Go To Setting</button>
+                </div>
+
+                <div class="card">
+                    <img src="../Admin/resources/menu.png" alt="Menu">
+                    <h3>Menu</h3>
+                    <button onclick="document.location='menu.html'">Go To Setting</button>
+                </div>
+
+                <div class="card">
+                    <img src="../Admin/resources/facility.png" alt="Features & Facilities">
+                    <h3>Features & Facilities</h3>
+                    <button onclick="document.location='features.html'">Go To Setting</button>
+                </div>
+
+                <div class="card">
+                    <img src="../Admin/resources/user message.png" alt="User Queries">
+                    <h3>User Queries</h3>
+                    <button onclick="document.location='userMessage.php'">Go To Setting</button>
+                </div>
+
+                <div class="card">
+                    <img src="../Admin/resources/food oder.png" alt="Menu">
+                    <h3>Food Oders</h3>
+                    <button onclick="document.location='foododer.php'">Go To Setting</button>
+                </div>
+
+                <div class="card">
+                    <img src="../Admin/resources/settings.png" alt="General Setting">
+                    <h3>General Setting</h3>
+                    <button onclick="document.location='settings.html'">Go To Setting</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

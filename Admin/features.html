@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Facilities Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        td img {
+            width: 100px;
+            height: auto;
+        }
+        
+        .btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        
+        .btn-edit {
+            background-color: #2196F3;
+        }
+        
+        .btn-upload {
+            background-color: #4CAF50;
+        }
+        
+        .btn-delete {
+            background-color: #f44336;
+        }
+        
+        .form-container {
+            margin-bottom: 20px;
+        }
+        
+        .form-container input,
+        .form-container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .form-container button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            background-color: #2196F3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Facilities Management</h1>
+
+    <div class="form-container">
+        <h2>Add/Edit Facility</h2>
+        <form id="facilityForm">
+            <input type="hidden" id="facilityId">
+            <label for="facilityName">Facility Name:</label>
+            <input type="text" id="facilityName" required>
+
+            <label for="facilityDescription">Description:</label>
+            <textarea id="facilityDescription" rows="4" required></textarea>
+
+            <label for="facilityPhoto">Photo URL:</label>
+            <input type="text" id="facilityPhoto" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Facility Name</th>
+                <th>Description</th>
+                <th>Photo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="facilityTableBody">
+
+            <tr data-id="1">
+                <td>Convenient Parking for Our Guests</td>
+                <td>We understand the importance of hassle-free parking when you visit our restaurant. Our dedicated parking area, located just steps from our entrance, ensures you can easily find a spot. For your convenience, we offer well-marked spaces,
+                    accessible parking, and clear signage to guide you. Additionally, during peak hours, our complimentary valet service is available to make your visit even smoother. Should our lot be full, we have partnered with nearby parking facilities
+                    to guarantee you always have a place to park. Enjoy your dining experience without the worry of parking—it's our pleasure to take care of you.</td>
+                <td><img src="Resources/Feactures/parking.jpeg" alt="Parking"></td>
+                <td>
+                    <button class="btn btn-edit" onclick="editFacility(1)">Edit</button>
+                    <button class="btn btn-upload" onclick="uploadPhoto(1)">Upload New Photo</button>
+                    <button class="btn btn-delete" onclick="deleteFacility(1)">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script>
+        const facilities = [{
+                id: 1,
+                name: 'Convenient Parking for Our Guests',
+                description: 'We understand the importance of hassle-free parking when you visit our restaurant. Our dedicated parking area, located just steps from our entrance, ensures you can easily find a spot. For your convenience, we offer well-marked spaces, accessible parking, and clear signage to guide you. Additionally, during peak hours, our complimentary valet service is available to make your visit even smoother. Should our lot be full, we have partnered with nearby parking facilities to guarantee you always have a place to park. Enjoy your dining experience without the worry of parking—its our pleasure to take care of you',
+                photo: 'Resources/Feactures/parking.jpeg'
+            }, {
+                id: 2,
+                name: 'Indulge in Our Sumptuous Buffet',
+                description: 'Experience the ultimate culinary journey at our restaurants lavish buffet. Our chefs take pride in offering an extensive array of dishes, catering to every palate. From freshly prepared salads and artisanal bread to a variety of internationalcuisines, our buffet promises a feast for your senses. Start your meal with a selection of appetizers, move on to mouth-watering main courses, and finish with an irresistible assortment of desserts. Each dish is crafted with the finestingredients, ensuring a delightful dining experience. Whether youre celebrating a special occasion or simply indulging in a delicious meal, our buffet offers something for everyone. Join us and savor the flavors of our diverse anddelectable offerings.',
+                photo: 'Resources/buffet.jpg',
+            }, {
+                id: 3,
+                name: 'Exclusive Private Dining Experience',
+                description: '>Discover the perfect setting for your special occasions in our exclusive private dining area. Whether you were hosting a business meeting, celebrating a milestone, or enjoying an intimate gathering, our elegantly designed private diningrooms offer an atmosphere of sophistication and privacy. Each room is beautifully appointed with stylish décor and customizable seating arrangements to suit your needs. Our dedicated staff is committed to providing impeccable service,ensuring that your event runs smoothly from start to finish. Indulge in a customized menu crafted by our talented chefs, featuring a selection of exquisite dishes made with the finest ingredients. We are happy to accommodate any dietarypreferences and create a dining experience tailored to your tastes. Create unforgettable memories in our private dining space, where every detail is meticulously taken care of, allowing you and your guests to relax and enjoy the moment.',
+                photo: 'Resources/Feactures/private.jpeg',
+            }, {
+                id: 4,
+                name: 'Fun-Filled Kids Play Area',
+                description: 'We believe that dining out should be enjoyable for the whole family. That’s why we’ve created a dedicated kids play area designed to entertain and engage our youngest guests. Our play area features a variety of activities and toys, ensuringyour children have a fun and safe space to explore while you relax and enjoy your meal. Supervised by our friendly staff, the play area includes interactive games, arts and crafts, and a cozy reading nook. Our goal is to provide awelcoming environment where kids can make new friends and let their imaginations run wild. Parents can dine with peace of mind, knowing that their children are entertained and cared for. Join us for a family-friendly dining experiencewhere both adults and kids can have a fantastic time.',
+                photo: 'Resources/Feactures/kidsplayarea.jpeg',
+            }, {
+                id: 5,
+                name: 'Exciting Game Area',
+                description: 'Elevate your dining experience with a visit to our vibrant indoor game area. Designed for guests of all ages, our game area offers a variety of entertaining activities that promise hours of fun. Challenge your friends to a game of poolor test your skills with our foosball tables, dart boards, and a selection of classic arcade games. Our indoor game area is perfect for a casual hangout, a family outing, or a lively evening with friends. With comfortable seating anda lively atmosphere, it’s the ideal place to relax and enjoy some friendly competition. Whether you were a seasoned player or just lookingfor some fun,there is something for everyone to enjoy. Join us and add a playful touch to yourdining experience. Our indoor game area is sure to make every visit to our restaurant memorable and entertaining.',
+                photo: 'Resources/Feactures/gameArea.jpeg',
+            }, {
+                id: 6,
+                name: 'Relax and Unwind in Our Elegant Lounge',
+                description: 'Step into our inviting lounge, where comfort meets sophistication. Perfect for both casual get-togethers and intimate gatherings, our lounge offers a cozy atmosphere with plush seating and ambient lighting. Enjoy a curated selection ofhandcrafted cocktails, fine wines, and premium spirits, all served by our expert bartenders. Pair your drink with a variety of delectable small plates and appetizers, crafted to complement your beverage of choice. Whether youre windingdown after a long day or kicking off an evening of celebration, our lounge is the ideal spot to relax and unwind. Join us for happy hour specials, live music events, or simply to enjoy a quiet moment in a stylish setting. Our loungeis your haven for relaxation and enjoyment, any time of the day.',
+                photo: 'Resources/Feactures/lounge.jpg',
+            }
+
+        ];
+
+        function populateTable() {
+            const tableBody = document.getElementById('facilityTableBody');
+            tableBody.innerHTML = '';
+
+            facilities.forEach(facility => {
+                const row = document.createElement('tr');
+                row.setAttribute('data-id', facility.id);
+
+                row.innerHTML = `
+                    <td>${facility.name}</td>
+                    <td>${facility.description}</td>
+                    <td><img src="${facility.photo}" alt="${facility.name}"></td>
+                    <td>
+                        <button class="btn btn-edit" onclick="editFacility(${facility.id})">Edit</button>
+                        <button class="btn btn-delete" onclick="deleteFacility(${facility.id})">Delete</button>
+                        <button class="btn btn-upload" onclick="uploadPhoto(${facility.id})">Upload New Photo</button>
+                    </td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        function editFacility(id) {
+            const facility = facilities.find(f => f.id === id);
+            if (facility) {
+                document.getElementById('facilityId').value = facility.id;
+                document.getElementById('facilityName').value = facility.name;
+                document.getElementById('facilityDescription').value = facility.description;
+                document.getElementById('facilityPhoto').value = facility.photo;
+            }
+        }
+
+        function uploadPhoto(id) {
+            alert('Upload new photo for facility with ID: ' + id);
+        }
+
+        function deleteFacility(id) {
+            if (confirm('Are you sure you want to delete this facility?')) {
+                const index = facilities.findIndex(f => f.id === id);
+                if (index !== -1) {
+                    facilities.splice(index, 1);
+                    populateTable();
+                }
+            }
+        }
+
+        document.getElementById('facilityForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const id = parseInt(document.getElementById('facilityId').value);
+            const name = document.getElementById('facilityName').value;
+            const description = document.getElementById('facilityDescription').value;
+            const photo = document.getElementById('facilityPhoto').value;
+
+            const facility = facilities.find(f => f.id === id);
+            if (facility) {
+                facility.name = name;
+                facility.description = description;
+                facility.photo = photo;
+            } else {
+                facilities.push({
+                    id: facilities.length + 1,
+                    name: name,
+                    description: description,
+                    photo: photo
+                });
+            }
+
+            populateTable();
+            document.getElementById('facilityForm').reset();
+        });
+
+        // Initialize table
+        populateTable();
+    </script>
+</body>
+
+</html>

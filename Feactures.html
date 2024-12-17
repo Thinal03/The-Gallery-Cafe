@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            text-align: center;
+            color: white;
+            -webkit-text-stroke: 0.5px black;
+        }
+        
+        .facility-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .facility-card {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .facility-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .facility-card h2 {
+            margin-top: 0;
+            color: #0047AB;
+            font-size: 1.5em;
+        }
+        
+        .facility-card p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            flex-grow: 1;
+            margin: 5px;
+        }
+        
+        .btn-full {
+            background-color: #FFA500;
+        }
+        
+        .btn-available {
+            background-color: #4CAF50;
+        }
+        
+        header {
+            background-color: #082535;
+            color: #fff;
+            padding: 1em 0;
+        }
+        
+        .footer {
+            background-color: #082535;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <div class="logo">
+                        <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe" width="150px">
+                    </div>
+                </td>
+                <td>
+                    <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <h1>Facilities Available</h1>
+    <div class="grid">
+        <div class="facility-container" id="facilitiesContainer">
+
+        </div>
+
+        <script>
+            const facilities = [{
+                id: 1,
+                name: 'Convenient Parking for Our Guests',
+                description: 'We understand the importance of hassle-free parking when you visit our restaurant. Our dedicated parking area, located just steps from our entrance, ensures you can easily find a spot. For your convenience, we offer well-marked spaces, accessible parking, and clear signage to guide you. Additionally, during peak hours, our complimentary valet service is available to make your visit even smoother. Should our lot be full, we have partnered with nearby parking facilities to guarantee you always have a place to park. Enjoy your dining experience without the worry of parking—its our pleasure to take care of you',
+                photo: 'Resources/Feactures/parking.jpeg'
+            }, {
+                id: 2,
+                name: 'Indulge in Our Sumptuous Buffet',
+                description: 'Experience the ultimate culinary journey at our restaurants lavish buffet. Our chefs take pride in offering an extensive array of dishes, catering to every palate. From freshly prepared salads and artisanal bread to a variety of internationalcuisines, our buffet promises a feast for your senses. Start your meal with a selection of appetizers, move on to mouth-watering main courses, and finish with an irresistible assortment of desserts. Each dish is crafted with the finestingredients, ensuring a delightful dining experience. Whether youre celebrating a special occasion or simply indulging in a delicious meal, our buffet offers something for everyone. Join us and savor the flavors of our diverse anddelectable offerings.',
+                photo: 'Resources/buffet.jpg',
+            }, {
+                id: 3,
+                name: 'Exclusive Private Dining Experience',
+                description: '>Discover the perfect setting for your special occasions in our exclusive private dining area. Whether you were hosting a business meeting, celebrating a milestone, or enjoying an intimate gathering, our elegantly designed private diningrooms offer an atmosphere of sophistication and privacy. Each room is beautifully appointed with stylish décor and customizable seating arrangements to suit your needs. Our dedicated staff is committed to providing impeccable service,ensuring that your event runs smoothly from start to finish. Indulge in a customized menu crafted by our talented chefs, featuring a selection of exquisite dishes made with the finest ingredients. We are happy to accommodate any dietarypreferences and create a dining experience tailored to your tastes. Create unforgettable memories in our private dining space, where every detail is meticulously taken care of, allowing you and your guests to relax and enjoy the moment.',
+                photo: 'Resources/Feactures/private.jpeg',
+            }, {
+                id: 4,
+                name: 'Fun-Filled Kids Play Area',
+                description: 'We believe that dining out should be enjoyable for the whole family. That’s why we’ve created a dedicated kids play area designed to entertain and engage our youngest guests. Our play area features a variety of activities and toys, ensuringyour children have a fun and safe space to explore while you relax and enjoy your meal. Supervised by our friendly staff, the play area includes interactive games, arts and crafts, and a cozy reading nook. Our goal is to provide awelcoming environment where kids can make new friends and let their imaginations run wild. Parents can dine with peace of mind, knowing that their children are entertained and cared for. Join us for a family-friendly dining experiencewhere both adults and kids can have a fantastic time.',
+                photo: 'Resources/Feactures/kidsplayarea.jpeg',
+            }, {
+                id: 5,
+                name: 'Exciting Game Area',
+                description: 'Elevate your dining experience with a visit to our vibrant indoor game area. Designed for guests of all ages, our game area offers a variety of entertaining activities that promise hours of fun. Challenge your friends to a game of poolor test your skills with our foosball tables, dart boards, and a selection of classic arcade games. Our indoor game area is perfect for a casual hangout, a family outing, or a lively evening with friends. With comfortable seating anda lively atmosphere, it’s the ideal place to relax and enjoy some friendly competition. Whether you were a seasoned player or just lookingfor some fun,there is something for everyone to enjoy. Join us and add a playful touch to yourdining experience. Our indoor game area is sure to make every visit to our restaurant memorable and entertaining.',
+                photo: 'Resources/Feactures/gameArea.jpeg',
+            }, {
+                id: 6,
+                name: 'Relax and Unwind in Our Elegant Lounge',
+                description: 'Step into our inviting lounge, where comfort meets sophistication. Perfect for both casual get-togethers and intimate gatherings, our lounge offers a cozy atmosphere with plush seating and ambient lighting. Enjoy a curated selection ofhandcrafted cocktails, fine wines, and premium spirits, all served by our expert bartenders. Pair your drink with a variety of delectable small plates and appetizers, crafted to complement your beverage of choice. Whether youre windingdown after a long day or kicking off an evening of celebration, our lounge is the ideal spot to relax and unwind. Join us for happy hour specials, live music events, or simply to enjoy a quiet moment in a stylish setting. Our loungeis your haven for relaxation and enjoyment, any time of the day.',
+                photo: 'Resources/Feactures/lounge.jpg',
+            }, ];
+
+            function populateFacilities() {
+                const container = document.getElementById('facilitiesContainer');
+                container.innerHTML = '';
+
+                facilities.forEach(facility => {
+                            const facilityDiv = document.createElement('div');
+                            facilityDiv.classList.add('facility-card');
+
+                            facilityDiv.innerHTML = `
+                    <h2>${facility.name}</h2>
+                    <img src="${facility.photo}" alt="${facility.name}">
+                    <p>${facility.description}</p>
+                    ${facility.fullSpaces ? `
+                    <div class="button-container">
+                        <button class="btn btn-full">Full Parking Space = ${facility.fullSpaces}</button>
+                        <button class="btn btn-available">Available Parking Slots = ${facility.availableSpaces}</button>
+                    </div>
+                    ` : ''}
+                `;
+
+                container.appendChild(facilityDiv);
+            });
+        }
+
+        // Initialize facilities
+        populateFacilities();
+        </script>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h2>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="Feactures.html" target="_blank">Features and Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+</body>
+
+</html>

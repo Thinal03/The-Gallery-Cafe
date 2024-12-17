@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Galery Cafe </title>
+    <style>
+        header {
+            background-color: #082535;
+            color: #ffffff;
+            padding: 0.2em;
+        }
+        
+        header h1 {
+            text-align: center;
+            -webkit-text-stroke: 0.5px black;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+        
+        nav ul li a {
+            color: #fffefe;
+            text-decoration: none;
+        }
+        
+        nav ul li button {
+            background-color: red;
+            color: #ffffff;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        nav ul li button:hover {
+            background-color: rgb(210, 31, 31);
+        }
+        
+        section {
+            padding: 2em;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .specials .img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .menu p {
+            font-size: 6;
+        }
+        /* Menu */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #fff;
+        }
+        
+        .item {
+            background-color: lightgray;
+            color: #000;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 30px;
+            text-align: center;
+        }
+        
+        .item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .item p {
+            font-size: smaller;
+        }
+        
+        button {
+            background-color: #ffbf00;
+            color: #000;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #ff9500;
+        }
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        
+        .hero {
+            background-image: url('http://minkfoodiee.com/foodiee/user/landing_pages/images/table-banner-2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: darkred;
+        }
+        /*about*/
+        
+        .about-us {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        
+        .about-content {
+            width: auto;
+            margin-left: 50px;
+        }
+        
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            font-size: medium;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: darkred;
+        }
+        
+        .container-grid {
+            width: auto;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .container-grid p {
+            font-size: larger;
+            color: rgb(13, 120, 162);
+        }
+        
+        .container-grid h2 {
+            color: rgb(11, 11, 20);
+        }
+        
+        .grid.item {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        .grid.item h2 {
+            font-size: 1.5em;
+            color: #a8c261;
+            margin-bottom: 10px;
+        }
+        /*footer */
+        
+        .footer {
+            background-color: #082535;
+            color: #fff;
+            padding: 40px 0;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer .logo {
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            max-width: 150px;
+        }
+        
+        .footer .quick-links,
+        .footer .contact {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer .quick-links a,
+        .footer .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer .quick-links a:hover,
+        .footer .contact a:hover {
+            color: #ccc;
+        }
+        
+        .footer .quick-links h3,
+        .footer .contact h3 {
+            border-bottom: 1px solid #e60000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .contact li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .contact li a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <div class="logo">
+                            <img src="Resources/the galery cafe logo.png" alt="The Gallery Cafe" width="150px">
+                        </div>
+                    </td>
+                    <td>
+                        <h1>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸</h1>
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#specials">The Gallery Cafe Specials</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="#Feactures">Features and Facilities</a></li>
+                <li><a href="#events">Special Events</a></li>
+                <li><a href="contact.html" target="_parent">Contact Us</a></li>
+                <li><button onclick="document.location='foododering.html'">Food Odering </button></li>
+                <span><span><li><button onclick="document.location='login.html'"> Log Out </button></li></span></span>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <div class="content">
+                <h1>The Gallery Cafe</h1>
+                <br>
+                <p>The Best Food in the World</p>
+                <br>
+                <a href="reservation.html" class="btn"> BOOK A TABLE </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <table>
+            <tr>
+                <center>
+                    <td>
+                        <div class="about-image">
+                            <img src="Resources/About/about 1.jpg" alt="Dish Image" height="600" weight="1500">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="about-content">
+                            <h2>About Us</h2>
+                            <p style="font-size: 130%;"> The Galery Cafe is one of the oldest and most reputed restaurants in Sri Lanka. The Galery Cafe is open daily from 11:30am to 3:00pm for lunch and 6:30pm to 11:00pm for dinner. While striving for perfect customer satisfaction,
+                                we also believe in offering authentic food that is created specifically for the local palate. We take pride in offering a diverse set of dishes from all provinces of Sri Lanka.</p>
+
+                            <p style="font-size: 130%;">Its unique charm and unequalled dedication to the palate of the connoisseur have earned The Galery Cafe a reputation of being the very best. We use only the finest ingredients from Sri Lanka. Our seafood and meats are fresh,
+                                never frozen, upholding the highest standard of quality.</p>
+
+                            <center><button onclick="document.location='about.html'"> Read more </button></center>
+                        </div>
+                    </td>
+                </center>
+            </tr>
+        </table>
+    </section>
+
+    <section id="menu">
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <br>
+
+                        <p>Mixed Seafood Dry Curry Bowl (W/Roast Bread)-4550</p><br>
+                        <p>The Galery Colombo Tasting Basket------------------5550</p><br>
+                        <p>Bamboo Biriyani (Chicken)------------------------------1950</p><br>
+                        <p>Kachal Rice-------------------------------------------------4250</p><br>
+                        <p>Waw Malu Meal--------------------------------------------2550</p><br>
+                        <p>Hot Butter Chicken Hopper Meal----------------------1950</p><br>
+                        <p>Negambo Crab curry-------------------------------------2250</p><br>
+                        <p>The Galery Special Chicken Kottu--------------------2750</p><br>
+
+
+                    </td>
+                    <td>
+                        <span><span><img src="Resources/icons/menu2.jpg" alt="menu " width="650px"></span></span>
+                    </td>
+                </tr>
+            </table>
+            <center><button onclick="document.location='menu.html'"> <h2> Check A Full Menu </h2> </button></center>
+        </center>
+    </section>
+
+    <section id="specials">
+
+        <h2>Special Food & Beverages</h2>
+        <div class="container-grid"><br>
+
+            <h3>Special Sri lanka Meals </h3>
+            <div class="grid">
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/PITTU.jpg" alt="PITTU">
+                    <p>PITTU</p>
+                    <p>Rs.690.00</p>
+                    <button onclick="document.location='menu.html#section 212'"> Find Out More</button>
+                </div>
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/STRING HOPPERS.jpg" alt="STRING HOPPERS">
+                    <p>STRING HOPPERS</p>
+                    <p>Rs.190.00</p>
+                    <button onclick="document.location='menu.html#section 212'"> Find Out More</button>
+
+                </div>
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/HOPPERS.jpg" alt="HOPPERS">
+                    <p>HOPPERS</p>
+                    <p>Rs.190.00</p>
+                    <button onclick="document.location='menu.html#section 212'">Find Out More</button>
+
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/pol rotti.jpg" alt="POL ROTTI">
+                    <p>POL ROTTI</p>
+                    <p>Rs.190.00</p>
+                    <button onclick="document.location='menu.html#section 212'"> Find Out More</button>
+
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/EGG ROTTI.jpg" alt="EGG ROTTI">
+                    <p>EGG ROTTI</p>
+                    <p>Rs.1190.00</p>
+                    <button onclick="document.location='menu.html#section212'">Find Out More</button>
+
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/The Galery  Tasting Basket 2.jpg" alt="The Galery Special Tasting Basket">
+                    <p>The Galery Tasting Basket</p>
+                    <p>Rs.3190.00</p>
+                    <button onclick="document.location='menu.html#section212'"> Find Out More</button>
+                </div>
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/Rice and Curry Special 3.jpg" alt="The Galery Special Rice and Curry ">
+                    <p>Rice and Curry Special</p>
+                    <p>Rs.2190.00</p>
+                    <button onclick="document.location='menu.html#section212'"> Find Out More</button>
+
+                </div>
+
+                <div class="item">
+                    <img src="Resources/menu/Sri lankan Food/The Galery Special Chicken Kottu 1.jpg" alt="The Galery Special Chicken Kottu">
+                    <p>The Galery Special Chicken Kottu</p>
+                    <p>Rs.1900.00</p>
+                    <button onclick="document.location='menu.html#section212'"> Find Out More</button>
+
+                </div>
+            </div><br>
+            <h3>Special Indian Meals </h3>
+            <div class="grid">
+
+
+                <div class="item">
+                    <img src="Resources/menu/Foods/special indian cicken dish 1.jpg" alt="Chicken 65">
+                    <p>Chicken 65 </p>
+                    <p>Rs.3090.00</p>
+                    <button onclick="document.location='menu.html#section 12'"> Find Out More</button>
+                </div>
+
+                <div class="item">
+                    <img src="Resources/menu/Foods/special indian cihcken dish 2.jpg" alt="Paneer 65">
+                    <p>Paneer 65</p>
+                    <p>Rs.2900.00</p>
+                    <button onclick="document.location='menu.html#section 12'"> Find Out More</button>
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Foods/special indian mushroom dish.jpeg" alt="Mashroom 65">
+                    <p>Mashroom 65</p>
+                    <p>Rs.1900.00</p>
+                    <button onclick="document.location='menu.html#section 12'"> Find Out More</button>
+                </div>
+
+                <div class="item">
+                    <img src="Resources/menu/Foods/Beef Shish Kebab.jpeg" alt="Beef Shish Kebab">
+                    <p>Beef Shish Kebab</p>
+                    <div class="price">RS.3100</div>
+                    <button onclick="document.location='menu.html#section 12'"> Find Out More</button>
+                </div>
+
+            </div><br>
+            <h3>Italian Special Wine </h3>
+            <div class="grid">
+
+
+                <div class="item">
+                    <img src="Resources/menu/Italian Food/wine Aglianico_del_vulture_.jpg" alt="Aglianico del vulture_">
+                    <p>Aglianico del vulture </p>
+                    <p>Rs.680.00</p>
+                    <button onclick="document.location='menu.html#section 322'"> Find Out More</button>
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Italian Food/wine Falanghina_di_Bonea.JPG" alt="Falanghina di Bonea">
+                    <p>Falanghina di Bonea</p>
+                    <p>Rs.650.00</p>
+                    <button onclick="document.location='menu.html#section 322'"> Find Out More</button>
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Italian Food/wine Franciacorta_milledi.jpg" alt="Franciacorta milledi">
+                    <p>Franciacorta milledi</p>
+                    <p>Rs.610.00</p>
+                    <button onclick="document.location='menu.html#section 322'"> Find Out More</button>
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Italian Food/wine Lacrima_Christi,_.jpg" alt="Lacrima Christi">
+                    <p>Lacrima Christi</p>
+                    <p>Rs.740.00</p>
+                    <button onclick="document.location='menu.html#section 322'"> Find Out More</button>
+                </div>
+
+
+                <div class="item">
+                    <img src="Resources/menu/Italian Food/wine lambrusco.jpg" alt="lambrusco ">
+                    <p>lambrusco</p>
+                    <p>Rs.740.00</p>
+                    <button onclick="document.location='menu.html#section 322'"> Find Out More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="Feactures">
+        <div class="container-grid">
+            <h1>Facilities</h1>
+            <div class="grid">
+                <div class="item">
+                    <h2>Indulge in Our Sumptuous Buffet</h2>
+                    <img src="Resources/buffet.jpg" alt="Buffet">
+
+                    <p>Experience the ultimate culinary journey at our restaurant's lavish buffet. Our chefs take pride in offering an extensive array of dishes, catering to every palate. From freshly prepared salads and artisanal bread to a variety of international
+                        cuisines, our buffet promises a feast for your senses. Start your meal with a selection of appetizers, move on to mouth-watering main courses, and finish with an irresistible assortment of desserts. Each dish is crafted with the
+                        finest ingredients, ensuring a delightful dining experience. Whether you're celebrating a special occasion or simply indulging in a delicious meal, our buffet offers something for everyone. Join us and savor the flavors of our
+                        diverse and delectable offerings.</p>
+                </div>
+                <div class="item">
+                    <h2>Convenient Parking for Our Guests</h2>
+                    <img src="Resources/Feactures/parking.jpeg" alt="Parking">
+
+                    <p>We understand the importance of hassle-free parking when you visit our restaurant. Our dedicated parking area, located just steps from our entrance, ensures you can easily find a spot. For your convenience, we offer well-marked spaces,
+                        accessible parking, and clear signage to guide you. Additionally, during peak hours, our complimentary valet service is available to make your visit even smoother. Should our lot be full, we have partnered with nearby parking facilities
+                        to guarantee you always have a place to park. Enjoy your dining experience without the worry of parking—it's our pleasure to take care of you.
+                    </p>
+                    <button>Full Packing Space = 75</button><br><br>
+                    <button>Avialable Packing slot for now 25 </button>
+                </div>
+                <div class="item">
+                    <h2>Relax and Unwind in Our Elegant Lounge</h2>
+                    <img src="Resources/Feactures/lounge.jpg" alt="lounge">
+
+                    <p> Step into our inviting lounge, where comfort meets sophistication. Perfect for both casual get-togethers and intimate gatherings, our lounge offers a cozy atmosphere with plush seating and ambient lighting. Enjoy a curated selection
+                        of handcrafted cocktails, fine wines, and premium spirits, all served by our expert bartenders. Pair your drink with a variety of delectable small plates and appetizers, crafted to complement your beverage of choice. Whether you're
+                        winding down after a long day or kicking off an evening of celebration, our lounge is the ideal spot to relax and unwind. Join us for happy hour specials, live music events, or simply to enjoy a quiet moment in a stylish setting.
+                        Our lounge is your haven for relaxation and enjoyment, any time of the day.</p>
+                </div>
+
+            </div>
+            <center><button onclick="document.location='Feactures.html'">Find Out More </button></center>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Special Events & Promotions</h2>
+        <div id="eventsList">
+            <center>
+                <h2>WHAT'S ON ... @ THE GALLERY CAFE</h2>
+            </center>
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <center>
+                                <h3>LIVE MUSIC ENTERTAINMENT <br>SATERDAY NIGHT </h3>
+                                <a href="Resources/special event/live music.jpg">
+                                    <img src="Resources/special event/live music.jpg" alt="Live music poster" width="250px"><br>
+                                </a>
+                            </center>
+                        </td>
+                        <td><br>
+                        </td>
+                        <td>
+                            <center>
+                                <h3>HAPPY HOUR </h3><br>
+                                <a href="Resources/special event/happy hour.jpg">
+                                    <img src="Resources/special event/happy hour.jpg" alt="Live music poster" width="320px">
+                                </a>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <h3>Annivesury month in <br>Resturant</h3>
+                                <a href="Resources/special event/annivesury month in resturant.jpg">
+                                    <img src="Resources/special event/annivesury month in resturant.jpg" alt="Live music poster" width="350px">
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="Resources/the galery cafe logo.png" alt="The Galery Cafe">
+                <h2>𝒯𝐻𝐸 𝒢𝒜𝐿𝐿𝐸𝑅𝒴 𝒞𝒜𝐹𝐸 </h2>
+            </div>
+            <ul class="quick-links">
+                <h3>Quick Links</h3>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="menu.html" target="_blank">Menu</a></li>
+                <li><a href="#specials">Specials</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="#Feactures">Features and Facilities</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+
+            </ul>
+            <section id="contact">
+                <ul class="contact">
+                    <h3>Contact</h3>
+                    <li>No:811, Galle Rd, Colombo 07.</li>
+                    <li>📞 0112 112 112</li>
+                    <li>📧 <a href="mailto:info@thegalerycafe.com">info@thegallerycafe.com</a></li>
+                    <li>📠 0112 112 112</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 <a href="thinalsilva314@gmail.com" style="color: #e60000;">The Gallery Cafe</a>. Developed by <a href="thinalsilva314@gmail.com" style="color: #e60000;">Thinal Laknindu</a>.
+        </div>
+    </div>
+
+</body>
+
+</html>
